@@ -9,6 +9,8 @@ return {
   black = nil,
   purple_faded = nil,
   blue = nil,
+  yellow = nil,
+  magenta = nil,
   darkgray = nil,
   lightgray = nil,
   inactivegray = nil,
