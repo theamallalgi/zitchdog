@@ -83,7 +83,7 @@ local function createEditorGroup(palette, zitch)
     Todo = { fg = palette.green, gui = "bold,italic" },
 
     MyFlashBackdrop = { bg = "NONE", fg = "#3d375e" }, -- backdrop
-    MyFlashMatch = { bg = palette.blue, fg = palette.purple3 }, -- search matches
+    MyFlashMatch = { bg = palette.magenta, fg = palette.purple3 }, -- search matches
     MyFlashCurrent = { bg = palette.yellow, fg = palette.purple3 }, -- current match
     MyFlashLabel = { bg = palette.red, fg = palette.purple3 }, -- jump label
 
@@ -97,32 +97,32 @@ local function createEditorGroup(palette, zitch)
     CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = "#7a6ebe" },
 
     TelescopePromptBorder = { fg = palette.magenta },
-    TelescopePromptNormal = { fg = palette.blue, bg = palette.gray },
-    TelescopePromptTitle = { fg = palette.black, bg = palette.blue, bold = true },
+    TelescopePromptNormal = { fg = palette.magenta, bg = palette.gray2 },
+    TelescopePromptTitle = { fg = palette.black, bg = palette.magenta, bold = true },
     TelescopePromptCounter = { fg = palette.inactivegray },
     TelescopePromptPrefix = { fg = palette.magenta },
     TelescopeResultsBorder = { fg = palette.magenta },
     TelescopeResults = { fg = palette.magenta },
     TelescopeResultsNormal = { fg = palette.magenta, bg = palette.darkgray },
-    TelescopeResultsTitle = { fg = palette.black, bg = palette.blue, bold = true },
+    TelescopeResultsTitle = { fg = palette.black, bg = palette.magenta, bold = true },
     TelescopePreviewBorder = { fg = palette.magenta },
     TelescopePreviewNormal = { fg = palette.white, bg = palette.darkgray },
-    TelescopePreviewTitle = { fg = palette.black, bg = palette.blue, bold = true },
+    TelescopePreviewTitle = { fg = palette.black, bg = palette.magenta, bold = true },
     TelescopeMatching = { fg = palette.green, bg = palette.purple2 },
-    TelescopeNormal = { bg = palette.blue, fg = palette.red },
+    TelescopeNormal = { bg = palette.magenta, fg = palette.red },
     TelescopePrompt = { fg = palette.cyan },
-    TelescopeResults = { fg = palette.blue },
+    TelescopeResults = { fg = palette.magenta },
     TelescopeSelection = { fg = palette.magenta, bg = "#21202b", bold = true },
-    TelescopeSelectionCaret = { fg = palette.orange, bg = "#21202b" },
+    TelescopeSelectionCaret = { fg = palette.orange2, bg = "#21202b" },
 
     NeoTreeDirectoryIcon = { bg = "NONE", fg = palette.yellow },
     NeoTreeDirectoryName = { bg = "NONE", fg = palette.yellow },
-    NeoTreeFileName = { bg = "NONE", fg = palette.blue },
-    NeoTreeTitleBar = { bg = "NONE", fg = palette.blue },
+    NeoTreeFileName = { bg = "NONE", fg = palette.magenta },
+    NeoTreeTitleBar = { bg = "NONE", fg = palette.magenta },
     NeoTreeCursorLine = { bg = "#21202b" },
-    NeoTreeFloatBorder = { bg = palette.darkgray, fg = palette.blue },
+    NeoTreeFloatBorder = { bg = palette.darkgray, fg = palette.magenta },
     NeoTreeFloatNormal = { bg = palette.darkgray, fg = palette.magenta },
-    NeoTreeFloatTitle = { bg = palette.blue, fg = palette.black },
+    NeoTreeFloatTitle = { bg = palette.magenta, fg = palette.black },
     NeoTreeIndentMarker = { bg = "NONE", fg = "#4f3e29" },
 
     LazyNormal = { bg = palette.darkgray },
