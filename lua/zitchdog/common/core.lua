@@ -41,6 +41,13 @@ function core.createPaletteByPattern(pattern)
 		palette.black = normalizeHex("#15141b")
 		palette.purple_faded = normalizeHex("#3d375e7f")
 		palette.blue = normalizeHex("#82e2ff")
+		palette.darkgray = normalizeHex("#15141b")
+	  palette.lightgray = normalizeHex("#433e62")
+	  palette.inactivegray = normalizeHex("#3b4261")
+	  palette.lightergray = normalizeHex("#776eae")
+	  palette.purple1 = normalizeHex("#333352")
+	  palette.purple2 = normalizeHex("#232338")
+	  palette.purple3 = normalizeHex("#12121c")
 	elseif pattern == "zitchdog-day" then
 		palette.purple = normalizeHex("#8464c6")
 		palette.green = normalizeHex("#54c59f")
@@ -52,12 +59,19 @@ function core.createPaletteByPattern(pattern)
 		palette.black = normalizeHex("#15141b")
 		palette.purple_faded = normalizeHex("#3d375e7f")
 		palette.blue = normalizeHex("#6cb2c7")
+		palette.darkgray = normalizeHex("#15141b")
+	  palette.lightgray = normalizeHex("#433e62")
+	  palette.inactivegray = normalizeHex("#3b4261")
+	  palette.lightergray = normalizeHex("#776eae")
+	  palette.purple1 = normalizeHex("#333352")
+	  palette.purple2 = normalizeHex("#232338")
+	  palette.purple3 = normalizeHex("#12121c")
 	end
 
 	return palette
 end
 
-function core.createAuraPattern(palette)
+function core.createZitchPattern(palette)
 	return {
 		Foreground = { fg = palette.white },
 		ForegroundBold = { fg = palette.white, gui = "bold" },
@@ -103,7 +117,7 @@ end
 function core.createGroups(palette)
 	local util = require("zitchdog.common.util")
 	local groups = {}
-	local pattern = core.createAuraPattern(palette)
+	local pattern = core.createZitchPattern(palette)
 
 	util.mergeTo(groups, require("zitchdog.groups.editor").create(palette, pattern))
 	util.mergeTo(groups, require("zitchdog.groups.languages").create(palette, pattern))

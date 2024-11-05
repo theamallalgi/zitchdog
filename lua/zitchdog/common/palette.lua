@@ -9,4 +9,11 @@ return {
   black = nil,
   purple_faded = nil,
   blue = nil,
+  darkgray = nil,
+  lightgray = nil,
+  inactivegray = nil,
+  lightergray = nil,
+  purple1 = nil,
+  purple2 = nil,
+  purple3 = nil,
 }

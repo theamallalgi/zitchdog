@@ -1,7 +1,7 @@
-local aura = {}
+local zitch = {}
 local core = require("zitchdog.common.core")
 
-function aura.setupTheme(pattern)
+function zitch.setupTheme(pattern)
 	vim.o.termguicolors = true
 	vim.o.background = "dark"
 	vim.g.colors_name = pattern
@@ -11,4 +11,4 @@ function aura.setupTheme(pattern)
 	core.createTheme(palette)
 end
 
-return aura
+return zitch
