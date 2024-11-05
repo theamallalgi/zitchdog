@@ -127,6 +127,11 @@ local function createEditorGroup(palette, zitch)
 
     LazyNormal = { bg = palette.darkgray },
     FloatBorder = { bg = "NONE", fg = palette.magenta },
+
+    Visual = { bg = "#21202b" },
+    WinSeparator = { fg = "#0f0f14", bg = "NONE" },
+    StatusLine = { fg = "NONE", bg = "NONE" },
+    StatusLineNC = { fg = "NONE", bg = "NONE" },
   }
 end
 
