@@ -126,9 +126,9 @@ local function createEditorGroup(palette, zitch)
 		NeoTreeIndentMarker = { bg = "NONE", fg = "#4f3e29" },
 
 		LazyNormal = { bg = palette.charcoal },
-    FloatBorder = { fg = palette.magenta }),
-    FloatTitle = { fg = palette.magenta }),
-    Float = { fg = palette.magenta }),
+		FloatBorder = { fg = palette.magenta },
+		FloatTitle = { fg = palette.magenta },
+		Float = { fg = palette.magenta },
 
 		Visual = { bg = "#21202b" },
 		WinSeparator = { fg = "#0f0f14", bg = "NONE" },
