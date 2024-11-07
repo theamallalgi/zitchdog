@@ -34,31 +34,31 @@ function core.createPaletteByPattern(pattern)
 		palette.purple = normalizeHex("#a277ff")
 		palette.green = normalizeHex("#61ffca")
 		palette.orange = normalizeHex("#ffca85")
-		palette.orange2 = normalizeHex("#ff7b7b")
+		palette.coral = normalizeHex("#ff7b7b")
 		palette.cyan = normalizeHex("#61ffca")
 		palette.red = normalizeHex("#ff6767")
 		palette.pink = normalizeHex("#f694ff")
 		palette.white = normalizeHex("#edecee")
 		palette.gray = normalizeHex("#6d6d6d")
-		palette.gray2 = normalizeHex("#29263c")
+		palette.ash = normalizeHex("#29263c")
 		palette.black = normalizeHex("#15141b")
 		palette.magenta = normalizeHex("#a277ff")
 		palette.yellow = normalizeHex("#ffca85")
-		palette.purple_faded = normalizeHex("#3d375e7f")
+		palette.mauve = normalizeHex("#3d375e7f")
 		palette.blue = normalizeHex("#82e2ff")
-		palette.darkgray = normalizeHex("#15141b")
-	  palette.lightgray = normalizeHex("#433e62")
-	  palette.inactivegray = normalizeHex("#3b4261")
-	  palette.lightergray = normalizeHex("#776eae")
-	  palette.purple1 = normalizeHex("#333352")
-	  palette.purple2 = normalizeHex("#232338")
-	  palette.purple3 = normalizeHex("#12121c")
-    palette.bgred = normalizeHex("#652929")
-		palette.bggreen = normalizeHex("#123127")
-		palette.bgblue = normalizeHex("#2f234b")
-		palette.bgyellow = normalizeHex("#4b3b27")
-		palette.bgorange = normalizeHex("#4b2424")
-		palette.bgmagenta = normalizeHex("#433e62")
+		palette.charcoal = normalizeHex("#15141b")
+		palette.slate = normalizeHex("#433e62")
+		palette.graphite = normalizeHex("#3b4261")
+		palette.lilac = normalizeHex("#776eae")
+		palette.amethyst = normalizeHex("#333352")
+		palette.aubergine = normalizeHex("#232338")
+		palette.ebony = normalizeHex("#12121c")
+		palette.maroon = normalizeHex("#652929")
+		palette.pine = normalizeHex("#123127")
+		palette.indigo = normalizeHex("#2f234b")
+		palette.umber = normalizeHex("#4b3b27")
+		palette.clay = normalizeHex("#4b2424")
+		palette.mulberry = normalizeHex("#433e62")
 	elseif pattern == "zitchdog-day" then
 		palette.purple = normalizeHex("#a277ff")
 		palette.green = normalizeHex("#61ffca")
@@ -70,15 +70,15 @@ function core.createPaletteByPattern(pattern)
 		palette.black = normalizeHex("#15141b")
 		palette.magenta = normalizeHex("#a277ff")
 		palette.yellow = normalizeHex("#ff7b7b")
-		palette.purple_faded = normalizeHex("#3d375e7f")
+		palette.mauve = normalizeHex("#3d375e7f")
 		palette.blue = normalizeHex("#82e2ff")
-		palette.darkgray = normalizeHex("#15141b")
-	  palette.lightgray = normalizeHex("#433e62")
-	  palette.inactivegray = normalizeHex("#3b4261")
-	  palette.lightergray = normalizeHex("#776eae")
-	  palette.purple1 = normalizeHex("#333352")
-	  palette.purple2 = normalizeHex("#232338")
-	  palette.purple3 = normalizeHex("#12121c")
+		palette.charcoal = normalizeHex("#15141b")
+		palette.slate = normalizeHex("#433e62")
+		palette.graphite = normalizeHex("#3b4261")
+		palette.lilac = normalizeHex("#776eae")
+		palette.amethyst = normalizeHex("#333352")
+		palette.aubergine = normalizeHex("#232338")
+		palette.ebony = normalizeHex("#12121c")
 	end
 
 	return palette
@@ -102,8 +102,8 @@ function core.createZitchPattern(palette)
 		BlueBold = { fg = palette.blue, gui = "bold" },
 		Purple = { fg = palette.purple },
 		PurpleBold = { fg = palette.purple, gui = "bold" },
-		PurpleFaded = { fg = palette.purple_faded },
-		PurpleFadedBold = { fg = palette.purple_faded, gui = "bold" },
+		PurpleFaded = { fg = palette.mauve },
+		PurpleFadedBold = { fg = palette.mauve, gui = "bold" },
 		Orange = { fg = palette.orange },
 		OrangeBold = { fg = palette.orange, gui = "bold" },
 		Pink = { fg = palette.pink },
@@ -113,7 +113,7 @@ function core.createZitchPattern(palette)
 		GreenSign = { fg = palette.green, bg = palette.black, gui = "inverse" },
 		BlueSign = { fg = palette.blue, bg = palette.black, gui = "inverse" },
 		PurpleSign = { fg = palette.purple, bg = palette.black, gui = "inverse" },
-		PurpleFadedSign = { fg = palette.purple_faded, bg = palette.black, gui = "inverse" },
+		PurpleFadedSign = { fg = palette.mauve, bg = palette.black, gui = "inverse" },
 		OrangeSign = { fg = palette.orange, bg = palette.black, gui = "inverse" },
 		PinkSign = { fg = palette.pink, bg = palette.black, gui = "inverse" },
 
@@ -121,7 +121,7 @@ function core.createZitchPattern(palette)
 		GreenUnderline = { fg = palette.green, gui = "undercurl", sp = palette.green },
 		BlueUnderline = { fg = palette.blue, gui = "undercurl", sp = palette.blue },
 		PurpleUnderline = { fg = palette.purple, gui = "undercurl", sp = palette.purple },
-		PurpleFadedUnderline = { fg = palette.purple_faded, gui = "undercurl", sp = palette.purple_faded },
+		PurpleFadedUnderline = { fg = palette.mauve, gui = "undercurl", sp = palette.mauve },
 		OrangeUnderline = { fg = palette.orange, gui = "undercurl", sp = palette.orange },
 		PinkUnderline = { fg = palette.pink, gui = "undercurl", sp = palette.pink },
 	}
