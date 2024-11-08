@@ -33,7 +33,7 @@ colorscheme zitchdog
 ```
 Set inside Nvim (Lua)
 ```lua
-vim.cmd[[colorscheme solarized-osaka]]
+vim.cmd[[colorscheme zitchdog]]
 ```
 ## Gallery 🖼️
 ![Bufferline1](https://github.com/theamallalgi/zitchdog/blob/main/resources/bufferline%20-mod%20(cmp).png?raw=true)
