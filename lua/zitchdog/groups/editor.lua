@@ -8,7 +8,7 @@ local function createEditorGroup(palette, zitch)
 		DiffDelete = { fg = palette.red, bg = palette.black, gui = "inverse" },
 		DiffText = { fg = palette.orange, bg = palette.black, gui = "inverse" },
 		EndOfBuffer = zitch.Background,
-		ErrorMsg = { fg = palette.red, bg = palette.maroon, gui = "bold" },
+		ErrorMsg = { fg = palette.red, bg = palette.black, gui = "bold" },
 		VertSplit = { fg = palette.black, bg = palette.black },
 		Folded = { fg = palette.gray, gui = "italic" },
 		FoldColumn = { fg = palette.gray, bg = palette.black },
@@ -34,7 +34,7 @@ local function createEditorGroup(palette, zitch)
 		TabLineSel = { fg = palette.green, bg = palette.black, gui = "inverse" },
 		Title = zitch.GreenBold,
 		VisualNOS = { bg = palette.mauve, gui = "inverse" },
-		WarningMsg = { fg = palette.orange, bg = palette.coral, gui = "bold" },
+		WarningMsg = { fg = palette.orange, bg = palette.black, gui = "bold" },
 		WildMenu = { fg = palette.blue, bg = palette.black, gui = "bold" },
 
 		Comment = { fg = palette.gray, gui = "italic" },
