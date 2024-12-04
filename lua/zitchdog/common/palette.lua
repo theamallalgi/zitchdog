@@ -27,4 +27,5 @@ return {
 	umber = nil,
 	clay = nil,
 	mulberry = nil,
+	teal = nil,
 }
