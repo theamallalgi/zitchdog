@@ -131,6 +131,12 @@ local function createEditorGroup(palette, zitch)
 		WinSeparator = { fg = "#0f0f14", bg = "NONE" },
 		StatusLine = { fg = "NONE", bg = "NONE" },
 		StatusLineNC = { fg = "NONE", bg = "NONE" },
+
+		DiagnosticError = { bg = palette.maroon, fg = palette.red },
+		DiagnosticInfo = { bg = palette.teal, fg = palette.cyan },
+		DiagnosticOk = { bg = palette.pine, fg = palette.green },
+		DiagnosticHint = { bg = palette.indigo, fg = palette.blue },
+		DiagnosticWarn = { bg = palette.clay, fg = palette.orange },
 	}
 end
 
