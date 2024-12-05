@@ -137,6 +137,16 @@ local function createEditorGroup(palette, zitch)
 		DiagnosticOk = { bg = palette.pine, fg = palette.green },
 		DiagnosticHint = { bg = palette.indigo, fg = palette.blue },
 		DiagnosticWarn = { bg = palette.clay, fg = palette.orange },
+
+		NoiceCmdlinePopupBorder = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupBorderCalculator = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupBorderCmdline = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupBorderFilter = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupBorderHelp = { fg = palette.yellow, bg = "NONE" },
+		NoiceCmdlinePopupBorderIncRename = { fg = palette.blue, bg = "NONE" },
+		NoiceCmdlinePopupBorderInput = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupBorderLua = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupBorderSearch = { fg = palette.orange, bg = "NONE" },
 	}
 end
 
