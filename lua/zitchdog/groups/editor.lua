@@ -139,14 +139,23 @@ local function createEditorGroup(palette, zitch)
 		DiagnosticWarn = { bg = palette.clay, fg = palette.orange },
 
 		NoiceCmdlinePopupBorder = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupIcon = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlinePopupBorderCalculator = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupIconCalculator = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlinePopupBorderCmdline = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupIconCmdline = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlinePopupBorderFilter = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupIconFilter = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlinePopupBorderHelp = { fg = palette.yellow, bg = "NONE" },
+		NoiceCmdlinePopupIconHelp = { fg = palette.yellow, bg = "NONE" },
 		NoiceCmdlinePopupBorderIncRename = { fg = palette.blue, bg = "NONE" },
+		NoiceCmdlinePopupIconIncRename = { fg = palette.blue, bg = "NONE" },
 		NoiceCmdlinePopupBorderInput = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupIconInput = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlinePopupBorderLua = { fg = palette.green, bg = "NONE" },
+		NoiceCmdlinePopupIconLua = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlinePopupBorderSearch = { fg = palette.orange, bg = "NONE" },
+		NoiceCmdlinePopupIconSearch = { fg = palette.orange, bg = "NONE" },
 	}
 end
 
