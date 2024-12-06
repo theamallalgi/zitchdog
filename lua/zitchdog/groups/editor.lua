@@ -134,6 +134,9 @@ local function createEditorGroup(palette, zitch)
 
 		DiagnosticError = { bg = palette.maroon, fg = palette.red },
 		DiagnosticFloatingError = { bg = "NONE", fg = palette.red },
+		DiagnosticSignError = { bg = "NONE", fg = palette.red },
+		DiagnosticUndelineError = { bg = "NONE", fg = palette.red },
+		DiagnosticVirtualTextError = { bg = "NONE", fg = palette.red },
 		DiagnosticInfo = { bg = palette.teal, fg = palette.cyan },
 		DiagnosticFloatingInfo = { bg = "NONE", fg = palette.cyan },
 		DiagnosticOk = { bg = palette.pine, fg = palette.green },
