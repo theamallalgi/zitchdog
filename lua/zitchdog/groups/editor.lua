@@ -133,10 +133,15 @@ local function createEditorGroup(palette, zitch)
 		StatusLineNC = { fg = "NONE", bg = "NONE" },
 
 		DiagnosticError = { bg = palette.maroon, fg = palette.red },
+		DiagnosticFloatingError = { bg = "NONE", fg = palette.red },
 		DiagnosticInfo = { bg = palette.teal, fg = palette.cyan },
+		DiagnosticFloatingInfo = { bg = "NONE", fg = palette.cyan },
 		DiagnosticOk = { bg = palette.pine, fg = palette.green },
+		DiagnosticFloatingOk = { bg = "NONE", fg = palette.green },
 		DiagnosticHint = { bg = palette.indigo, fg = palette.blue },
+		DiagnosticFloatingHint = { bg = "NONE", fg = palette.blue },
 		DiagnosticWarn = { bg = palette.clay, fg = palette.orange },
+		DiagnosticFloatingWarn = { bg = "NONE", fg = palette.orange },
 
 		NoiceCmdlinePopupBorder = { fg = palette.green, bg = "NONE" },
 		NoiceCmdlineIcon = { fg = palette.green, bg = "NONE" },
