@@ -1,0 +1,37 @@
+# colors (zitchdog - pine)
+
+# primary colors
+[colors.primary]
+background = "#0d0910"
+foreground = "#844364"
+
+# cursor colors
+[colors.cursor]
+cursor = "#844364"
+
+# selection colors
+[colors.selection]
+text = "CellForeground"
+background = "#150e19"
+
+# normal colors
+[colors.normal]
+black = "#0d0910"
+red = "#e43728"
+green = "#46914d"
+yellow = "#e47833"
+blue = "#658264"
+magenta = "#844364"
+cyan = "#188e5c"
+white = "#da7a64"
+
+# bright colors
+[colors.bright]
+black = "#2c1e36"
+red = "#7c1d19"
+green = "#255f2e"
+yellow = "#7c441f"
+blue = "#35503b"
+magenta = "#45223b"
+cyan = "#0d5a35"
+white = "#ffa073"

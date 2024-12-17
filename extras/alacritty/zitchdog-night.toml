@@ -1,0 +1,37 @@
+# colors (zitchdog - night)
+
+# primary colors
+[colors.primary]
+background = "#15141b"
+foreground = "#a277ff"
+
+# cursor colors
+[colors.cursor]
+cursor = "#a277ff"
+
+# selection colors
+[colors.selection]
+text = "CellForeground"
+background = "#29263c"
+
+# normal colors
+[colors.normal]
+black = "#110f18"
+red = "#ff6767"
+green = "#61ffca"
+yellow = "#ffca85"
+blue = "#82e2ff"
+magenta = "#a277ff"
+cyan = "#26f9eb"
+white = "#f6ceff"
+
+# bright colors
+[colors.bright]
+black = "#4d4d4d"
+red = "#993d3d"
+green = "#399978"
+yellow = "#99784f"
+blue = "#4e8799"
+magenta = "#604799"
+cyan = "#169289"
+white = "#937b99"
