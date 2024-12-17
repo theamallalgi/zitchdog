@@ -3,8 +3,8 @@ local palette = require("zitchdog.common.palette")
 
 local color = {}
 
-local foreground = palette.white
-local background = palette.black
+local foreground = "#da8774"
+local background = "#0d0910"
 
 local function hexToRGB(hexstr)
 	local hex = "[abcdef0-9][abcdef0-9]"
