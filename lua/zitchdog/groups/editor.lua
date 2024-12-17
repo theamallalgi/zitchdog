@@ -182,9 +182,9 @@ local function createEditorGroup(palette, zitch)
 		NoiceCmdlineIconSearch = { fg = palette.orange, bg = "NONE" },
 
 		AlphaHeader = { fg = palette.purple, bg = "NONE" },
-		AlphaButtonText = { fg = "#635e80", bg = "NONE", bold = true },
-		AlphaButtonShortcut = { fg = "#46425c", bg = "NONE", italic = false },
-		AlphaFooter = { fg = "#2f234b", bg = "NONE", italic = false },
+		AlphaButtonText = { fg = palette.purple, bg = "NONE", bold = true },
+		AlphaButtonShortcut = { fg = palette.mulberry, bg = "NONE", italic = false },
+		AlphaFooter = { fg = palette.mulberry, bg = "NONE", italic = false },
 	}
 end
 
