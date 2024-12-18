@@ -43,17 +43,16 @@ Install with Package Man (I use Lazy)
 ```
 
 ## Usage
+currently there are 3 available variants - `zitchdog-grape`, `zitchdog-pine`, `zitchdog-night`
 
-Set with Vimscript
+Set with `Vimscript`
 ```vim
-colorscheme zitchdog-grape
+colorscheme zitchdog-grape " zitchdog-(grape/pine/night)
 ```
-Set inside Nvim (Lua)
+Set inside `Nvim (Lua)`
 ```lua
-vim.cmd[[colorscheme zitchdog-grape]]
+vim.cmd[[colorscheme zitchdog-grape]] -- zitchdog-(grape/pine/night)
 ```
-
-- available variants - `zitchdog-grape`, `zitchdog-pine`, `zitchdog-night`
 
 ## Gallery
 
