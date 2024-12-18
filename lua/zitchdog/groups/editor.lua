@@ -43,6 +43,7 @@ local function createEditorGroup(palette, zitch)
 		Character = zitch.GreenBold,
 		Number = zitch.Green,
 		Boolean = zitch.Green,
+		["@variable"] = palette.white,
 
 		Identifier = zitch.Purple,
 		Function = zitch.Orange,
