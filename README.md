@@ -36,9 +36,9 @@ a minimal nvim theme based up on [aura theme](https://github.com/daltonmenezes/a
 Install with Package Man (I use Lazy)
 ```lua
 {
-	"theamallalgi/zitchdog",
-	lazy = false,
-	priority = 1000,
+  "theamallalgi/zitchdog",
+  lazy = false,
+  priority = 1000,
 },
 ```
 
