@@ -1,4 +1,4 @@
-# Zitchdog for (eza)[https://github.com/eza-community/eza]
+# Zitchdog for [eza](https://github.com/eza-community/eza)
 
 ## About
 
