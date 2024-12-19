@@ -1,0 +1,27 @@
+    # Zitchdog Grape
+
+    # Syntax Highlighting Colors
+
+    fish_color_normal db94e3
+    fish_color_command 64aae2
+    fish_color_keyword 8543e4
+    fish_color_quote e09066
+    fish_color_redirection db94e3
+    fish_color_end e39069
+    fish_color_option 8543e4
+    fish_color_error e4384c
+    fish_color_param 5a3c8d
+    fish_color_comment 191324
+    fish_color_selection --background=281a42
+    fish_color_search_match --background=281a42
+    fish_color_operator 46cda8
+    fish_color_escape 8543e4
+    fish_color_autosuggestion 191324
+
+    # Completion Pager Colors
+
+    fish_pager_color_progress 191324
+    fish_pager_color_prefix 64aae2
+    fish_pager_color_completion db94e3
+    fish_pager_color_description 191324
+    fish_pager_color_selected_background --background=281a42

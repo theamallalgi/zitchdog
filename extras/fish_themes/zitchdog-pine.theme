@@ -1,0 +1,27 @@
+    # Zitchdog Pine
+
+    # Syntax Highlighting Colors
+
+    fish_color_normal da7a64
+    fish_color_command 658265
+    fish_color_keyword 844364
+    fish_color_quote e37832
+    fish_color_redirection da7a64
+    fish_color_end e47833
+    fish_color_option 844364
+    fish_color_error e43728
+    fish_color_param 5a3c8d
+    fish_color_comment 191324
+    fish_color_selection --background=281b24
+    fish_color_search_match --background=281b24
+    fish_color_operator 46914d
+    fish_color_escape 844364
+    fish_color_autosuggestion 191324
+
+    # Completion Pager Colors
+
+    fish_pager_color_progress 191324
+    fish_pager_color_prefix 658265
+    fish_pager_color_completion da7a64
+    fish_pager_color_description 191324
+    fish_pager_color_selected_background --background=281b24
