@@ -28,4 +28,6 @@ return {
 	clay = nil,
 	mulberry = nil,
 	teal = nil,
+	lightblack = nil,
+	darkblack = nil,
 }

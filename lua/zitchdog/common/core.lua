@@ -61,6 +61,8 @@ function core.createPaletteByPattern(pattern)
 		palette.clay = normalizeHex("#4b2424")
 		palette.mulberry = normalizeHex("#433e62")
 		palette.teal = normalizeHex("#0e5e59")
+		palette.lightblack = normalizeHex("#1a1b26")
+		palette.darkblack = normalizeHex("#131218")
 	elseif pattern == "zitchdog-pine" then
 		palette.purple = normalizeHex("#844364")
 		palette.green = normalizeHex("#46914d")
@@ -92,6 +94,8 @@ function core.createPaletteByPattern(pattern)
 		palette.clay = normalizeHex("#331011")
 		palette.mulberry = normalizeHex("#2d1e26")
 		palette.teal = normalizeHex("#083122")
+		palette.lightblack = normalizeHex("#100d17")
+		palette.darkblack = normalizeHex("#0b080e")
 	elseif pattern == "zitchdog-grape" then
 		palette.purple = normalizeHex("#8543e4")
 		palette.green = normalizeHex("#46cda8")
@@ -123,6 +127,8 @@ function core.createPaletteByPattern(pattern)
 		palette.clay = normalizeHex("#331016")
 		palette.mulberry = normalizeHex("#2e1d46")
 		palette.teal = normalizeHex("#08313f")
+		palette.lightblack = normalizeHex("#100d17")
+		palette.darkblack = normalizeHex("#0b080e")
 	end
 
 	return palette
