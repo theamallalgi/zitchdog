@@ -92,7 +92,7 @@ local function createEditorGroup(palette, zitch)
 		CmpItemKindText = { bg = "NONE", fg = palette.magenta },
 		CmpItemKind = { bg = "NONE", fg = palette.magenta },
 		CmpItemAbbr = { bg = "NONE", fg = palette.magenta },
-		CmpItemAbbrMatch = { bg = palette.mulberry, fg = palette.magenta, bold = true },
+		CmpItemAbbrMatch = { bg = "NONE", fg = palette.lilac, bold = true },
 		CmpItemAbbrMatchFuzzy = { bg = palette.mulberry, fg = palette.magenta },
 
 		TelescopePromptBorder = { fg = palette.magenta },
