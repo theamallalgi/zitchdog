@@ -86,14 +86,14 @@ local function createEditorGroup(palette, zitch)
 		MyFlashCurrent = { bg = palette.yellow, fg = palette.ebony }, -- current match
 		MyFlashLabel = { bg = palette.red, fg = palette.ebony }, -- jump label
 
-		cmpnormal = { bg = "#15141b", fg = "#554d84" },
-		CmpBorder = { bg = "#15141b", fg = "#554d84" },
-		CmpCursorLine = { bg = "#1b1a23", fg = "#a277ff", bold = true },
-		CmpItemKindText = { bg = "NONE", fg = "#554d84" },
-		CmpItemKind = { bg = "NONE", fg = "#554d84" },
-		CmpItemAbbr = { bg = "NONE", fg = "#554d84" },
-		CmpItemAbbrMatch = { bg = "NONE", fg = "#7a6ebe", bold = true },
-		CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = "#7a6ebe" },
+		cmpnormal = { bg = palette.black, fg = palette.magenta },
+		CmpBorder = { bg = palette.black, fg = palette.magenta },
+		CmpCursorLine = { bg = palette.lightblack, fg = palette.magenta, bold = true },
+		CmpItemKindText = { bg = "NONE", fg = palette.magenta },
+		CmpItemKind = { bg = "NONE", fg = palette.magenta },
+		CmpItemAbbr = { bg = "NONE", fg = palette.magenta },
+		CmpItemAbbrMatch = { bg = palette.mulberry, fg = palette.magenta, bold = true },
+		CmpItemAbbrMatchFuzzy = { bg = palette.mulberry, fg = palette.magenta },
 
 		TelescopePromptBorder = { fg = palette.magenta },
 		TelescopePromptNormal = { fg = palette.magenta, bg = palette.charcoal },
