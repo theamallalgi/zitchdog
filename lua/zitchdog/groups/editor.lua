@@ -81,7 +81,7 @@ local function createEditorGroup(palette, zitch)
 		Error = { fg = palette.red, gui = "bold,underline" },
 		Todo = { fg = palette.green, gui = "bold,italic" },
 
-		MyFlashBackdrop = { bg = "NONE", fg = "#3d375e" }, -- backdrop
+		MyFlashBackdrop = { fg = palette.mulberry, bg = "NONE", italic = false }, -- backdrop
 		MyFlashMatch = { bg = palette.magenta, fg = palette.ebony }, -- search matches
 		MyFlashCurrent = { bg = palette.yellow, fg = palette.ebony }, -- current match
 		MyFlashLabel = { bg = palette.red, fg = palette.ebony }, -- jump label
@@ -93,7 +93,7 @@ local function createEditorGroup(palette, zitch)
 		CmpItemKind = { bg = "NONE", fg = palette.magenta },
 		CmpItemAbbr = { bg = "NONE", fg = palette.magenta },
 		CmpItemAbbrMatch = { bg = "NONE", fg = palette.green, bold = true },
-		CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = palette.yellow },
+		CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = palette.pine },
 
 		TelescopePromptBorder = { fg = palette.magenta },
 		TelescopePromptNormal = { fg = palette.magenta, bg = palette.charcoal },
