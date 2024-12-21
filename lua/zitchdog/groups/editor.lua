@@ -187,7 +187,7 @@ local function createEditorGroup(palette, zitch)
 		AlphaButtonShortcut = { fg = palette.amethyst, bg = "NONE", italic = false },
 		AlphaFooter = { fg = palette.mulberry, bg = "NONE", italic = false },
 
-		lualine_a_normal = { fg = palette.blue, bg = palette.black },
+		lualine_a_normal = { fg = palette.blue, bg = palette.lightblack },
 		lualine_b_normal = { fg = palette.slate, bg = palette.darkblack },
 		lualine_b_fancy_branch_normal = { fg = palette.slate, bg = palette.darkblack },
 		lualine_c_normal = { fg = palette.slate, bg = palette.darkblack },
@@ -195,10 +195,10 @@ local function createEditorGroup(palette, zitch)
 		lualine_y_normal = { fg = palette.slate, bg = palette.darkblack },
 		lualine_z_normal = { fg = palette.slate, bg = palette.darkblack },
 
-		lualine_a_inactive = { fg = palette.inactivegray, bg = palette.magenta },
-		lualine_b_inactive = { fg = palette.inactivegray, bg = palette.magenta },
-		lualine_b_fancy_branch_inactive = { fg = palette.inactivegray, bg = palette.magenta },
-		lualine_c_inactive = { fg = palette.inactivegray },
+		lualine_a_inactive = { fg = palette.graphite, bg = palette.magenta },
+		lualine_b_inactive = { fg = palette.graphite, bg = palette.magenta },
+		lualine_b_fancy_branch_inactive = { fg = palette.graphite, bg = palette.magenta },
+		lualine_c_inactive = { fg = palette.graphite },
 
 		lualine_a_command = { fg = palette.orange, bg = "#4b2424" },
 		lualine_z_command = { fg = palette.slate, bg = palette.darkblack },
