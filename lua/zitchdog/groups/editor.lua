@@ -1,7 +1,7 @@
 local function createEditorGroup(palette, zitch)
 	return {
 		CursorLine = { bg = palette.charcoal },
-		Cursor = { fg = zitch.black, bg = zitch.magenta },
+		Cursor = { fg = palette.black, bg = palette.magenta },
 		Directory = zitch.GreenBold,
 		DiffAdd = { fg = palette.green, bg = palette.black, gui = "inverse" },
 		DiffChange = { fg = palette.blue, bg = palette.black, gui = "inverse" },
