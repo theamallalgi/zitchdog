@@ -24,7 +24,7 @@ local function createEditorGroup(palette, zitch)
 		Pmenu = { fg = palette.magenta, bg = palette.black },
 		PmenuSel = { fg = palette.magenta, bg = palette.mulberry, gui = "bold" },
 		PmenuSbar = { bg = palette.black },
-		PmenuThumb = { bg = palette.black },
+		PmenuThumb = { bg = palette.magenta },
 		Search = { fg = palette.black, bg = palette.yellow },
 		SpecialKey = zitch.Foreground,
 		SpellBad = zitch.RedUnderline,
