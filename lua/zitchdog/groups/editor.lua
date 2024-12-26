@@ -211,6 +211,7 @@ local function createEditorGroup(palette, zitch)
 		lualine_a_fancy_branch_terminal = { fg = palette.green, bg = "#123127" },
 
 		CopilotSuggestion = { bg = "NONE", fg = palette.mulberry },
+		CopilotAnnotation = { bg = "NONE", fg = palette.slate, bold = true },
 	}
 end
 
