@@ -155,9 +155,9 @@ local function createEditorGroup(palette, zitch)
 
 		DiagnosticHint = { bg = "NONE", fg = palette.blue },
 		DiagnosticFloatingHint = { bg = "NONE", fg = palette.blue },
-		DiagnosticSignHint = { bg = "NONE", fg = palette.red },
-		DiagnosticUndelineHint = { bg = "NONE", fg = palette.red },
-		DiagnosticVirtualTextHint = { bg = palette.indigo, fg = palette.red },
+		DiagnosticSignHint = { bg = "NONE", fg = palette.blue },
+		DiagnosticUndelineHint = { bg = "NONE", fg = palette.blue },
+		DiagnosticVirtualTextHint = { bg = palette.indigo, fg = palette.blue },
 
 		DiagnosticWarn = { bg = "NONE", fg = palette.orange },
 		DiagnosticFloatingWarn = { bg = "NONE", fg = palette.orange },
