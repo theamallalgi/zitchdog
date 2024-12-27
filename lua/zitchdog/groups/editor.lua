@@ -216,6 +216,9 @@ local function createEditorGroup(palette, zitch)
 		lualine_z_visual = { fg = palette.slate, bg = palette.darkblack },
 		lualine_a_fancy_branch_terminal = { fg = palette.green, bg = "#123127" },
 
+		vim.api.nvim_set_hl(0, "lualine_a_normal", { fg = palette.red, bg = palette.pine }),
+		vim.api.nvim_set_hl(0, "lualine_b_normal", { fg = palette.slate, bg = palette.darkblack }),
+
 		CopilotSuggestion = { bg = "NONE", fg = palette.mulberry },
 		CopilotAnnotation = { bg = "NONE", fg = palette.slate, bold = true },
 	}
