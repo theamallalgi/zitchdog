@@ -195,7 +195,7 @@ local function createEditorGroup(palette, zitch)
 		AlphaButtonShortcut = { fg = palette.amethyst, bg = "NONE", italic = false },
 		AlphaFooter = { fg = palette.mulberry, bg = "NONE", italic = false },
 
-		lualine_a_normal = { fg = palette.blue, bg = palette.lightblack },
+		lualine_a_normal = { fg = palette.red, bg = palette.pine },
 		lualine_b_normal = { fg = palette.slate, bg = palette.darkblack },
 		lualine_b_fancy_branch_normal = { fg = palette.slate, bg = palette.darkblack },
 		lualine_c_normal = { fg = palette.slate, bg = palette.darkblack },
