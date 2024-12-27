@@ -184,6 +184,12 @@ local function createEditorGroup(palette, zitch)
 		NoiceCmdlinePopupBorderSearch = { fg = palette.orange, bg = "NONE" },
 		NoiceCmdlineIconSearch = { fg = palette.orange, bg = "NONE" },
 
+		NotifyINFOBody = { fg = palette.blue, bg = "NONE" },
+		NotifyDEBUGBody = { fg = palette.yellow, bg = "NONE" },
+		NotifyERRORBody = { fg = palette.red, bg = "NONE" },
+		NotifyTRACEBody = { fg = palette.purple, bg = "NONE" },
+		NotifyWARNBody = { fg = palette.orange, bg = "NONE" },
+
 		AlphaHeader = { fg = palette.purple, bg = "NONE" },
 		AlphaButtonText = { fg = palette.mulberry, bg = "NONE", bold = true },
 		AlphaButtonShortcut = { fg = palette.amethyst, bg = "NONE", italic = false },
