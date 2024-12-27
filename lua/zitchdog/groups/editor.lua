@@ -112,8 +112,8 @@ local function createEditorGroup(palette, zitch)
 		TelescopeNormal = { bg = palette.magenta, fg = palette.red },
 		TelescopePrompt = { fg = palette.cyan },
 		TelescopeResults = { fg = palette.magenta },
-		TelescopeSelection = { fg = palette.magenta, bg = palette.mulberry, bold = true },
-		TelescopeSelectionCaret = { fg = palette.coral, bg = palette.mulberry },
+		TelescopeSelection = { fg = palette.magenta, bg = palette.amethyst, bold = true },
+		TelescopeSelectionCaret = { fg = palette.coral, bg = palette.amethyst },
 
 		NeoTreeDirectoryIcon = { bg = "NONE", fg = palette.yellow },
 		NeoTreeDirectoryName = { bg = "NONE", fg = palette.yellow },
