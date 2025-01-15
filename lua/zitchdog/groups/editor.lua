@@ -219,8 +219,12 @@ local function createEditorGroup(palette, zitch)
     CopilotSuggestion = { bg = "NONE", fg = palette.mulberry },
     CopilotAnnotation = { bg = "NONE", fg = palette.slate, bold = true },
 
-    RenderMarkdownCode = zitch.Green,
-    RenderMarkdownCodeInline = zitch.Green,
+    RenderMarkdownCode = { bg = "NONE" },
+    RenderMarkdownCodeInline = { bg = palette.darkblack },
+    RenderMarkdownBullet = { fg = palette.orange },
+    RenderMarkdownDash = { fg = palette.orange },
+    RenderMarkdownTableHead = { fg = palette.red },
+    RenderMarkdownTableRow = { fg = palette.orange },
   }
 end
 
