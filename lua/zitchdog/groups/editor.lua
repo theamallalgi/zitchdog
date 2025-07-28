@@ -95,17 +95,17 @@ local function createEditorGroup(palette, zitch)
 		-- Core UI
 		BlinkCmpMenu = { fg = palette.magenta, bg = palette.black },
 		BlinkCmpMenuBorder = { bg = palette.black, fg = palette.magenta },
-		BlinkCmpMenuSelection = { fg = palette.magenta, bg = palette.mulberry, gui = "bold" },
+		BlinkCmpMenuSelection = { bg = palette.mulberry, gui = "bold" },
 		BlinkCmpScrollBarThumb = { bg = palette.magenta },
 		BlinkCmpScrollBarGutter = { bg = palette.black },
 		-- Label text
 		BlinkCmpLabel = { bg = "NONE", fg = palette.magenta },
 		BlinkCmpLabelDeprecated = { bg = "NONE", fg = palette.magenta, strikethrough = true },
 		BlinkCmpLabelMatch = { bg = "NONE", fg = palette.green, bold = true },
-		-- BlinkCmpLabelDetail = {},
+		BlinkCmpLabelDetail = { bg = "NONE", fg = palette.magenta },
 		BlinkCmpLabelDescription = { bg = "NONE", fg = palette.magenta },
 		-- Kind icon text (left side of completion)
-		BlinkCmpKind = { bg = "NONE", fg = palette.magenta }, -- fallback if no kind matched
+		BlinkCmpKind = { bg = "NONE", fg = palette.magenta },
 		BlinkCmpKindFunction = { bg = "NONE", fg = palette.cyan },
 		BlinkCmpKindMethod = { bg = "NONE", fg = palette.cyan },
 		BlinkCmpKindVariable = { bg = "NONE", fg = palette.yellow },
@@ -115,7 +115,7 @@ local function createEditorGroup(palette, zitch)
 		BlinkCmpKindField = { bg = "NONE", fg = palette.orange },
 		BlinkCmpKindProperty = { bg = "NONE", fg = palette.yellow },
 		BlinkCmpKindInterface = { bg = "NONE", fg = palette.magenta },
-		BlinkCmpSource = { bg = "NONE", fg = palette.gray },
+		BlinkCmpSource = { bg = "NONE", fg = palette.lilac },
 		-- Source label (right side)
 		-- BlinkCmpGhostText = {}, -- Ghost text preview
 		-- Docs popup
