@@ -90,8 +90,45 @@ local function createEditorGroup(palette, zitch)
 		CmpItemKind = { bg = "NONE", fg = palette.magenta },
 		CmpItemAbbr = { bg = "NONE", fg = palette.magenta },
 		CmpItemAbbrMatch = { bg = "NONE", fg = palette.green, bold = true },
-		CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = palette.maroon },
+		CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = palette.orange },
 
+		-- Core UI
+		BlinkCmpMenu = { fg = palette.magenta, bg = palette.black },
+		BlinkCmpMenuBorder = { bg = palette.black, fg = palette.magenta },
+		BlinkCmpMenuSelection = { fg = palette.magenta, bg = palette.mulberry, gui = "bold" },
+		BlinkCmpScrollBarThumb = { bg = palette.magenta },
+		BlinkCmpScrollBarGutter = { bg = palette.black },
+		-- Label text
+		BlinkCmpLabel = { bg = "NONE", fg = palette.magenta },
+		BlinkCmpLabelDeprecated = { bg = "NONE", fg = palette.magenta, strikethrough = true },
+		BlinkCmpLabelMatch = { bg = "NONE", fg = palette.green, bold = true },
+		-- BlinkCmpLabelDetail = {},
+		BlinkCmpLabelDescription = { bg = "NONE", fg = palette.magenta },
+		-- Kind icon text (left side of completion)
+		BlinkCmpKind = { bg = "NONE", fg = palette.magenta }, -- fallback if no kind matched
+		BlinkCmpKindFunction = { bg = "NONE", fg = palette.cyan },
+		BlinkCmpKindMethod = { bg = "NONE", fg = palette.cyan },
+		BlinkCmpKindVariable = { bg = "NONE", fg = palette.yellow },
+		BlinkCmpKindClass = { bg = "NONE", fg = palette.magenta },
+		BlinkCmpKindModule = { bg = "NONE", fg = palette.blue },
+		BlinkCmpKindKeyword = { bg = "NONE", fg = palette.orange },
+		BlinkCmpKindField = { bg = "NONE", fg = palette.orange },
+		BlinkCmpKindProperty = { bg = "NONE", fg = palette.yellow },
+		BlinkCmpKindInterface = { bg = "NONE", fg = palette.magenta },
+		BlinkCmpSource = { bg = "NONE", fg = palette.gray },
+		-- Source label (right side)
+		-- BlinkCmpGhostText = {}, -- Ghost text preview
+		-- Docs popup
+		BlinkCmpDoc = { fg = palette.white, bg = palette.black },
+		BlinkCmpDocBorder = { bg = palette.black, fg = palette.magenta },
+		BlinkCmpDocSeparator = { bg = "NONE", fg = palette.gray },
+		-- BlinkCmpDocCursorLine = {},
+		-- Signature help
+		BlinkCmpSignatureHelp = { fg = palette.white, bg = palette.black },
+		BlinkCmpSignatureHelpBorder = { bg = palette.black, fg = palette.magenta },
+		-- BlinkCmpSignatureHelpActiveParameter = {},
+
+		-- Custom Flash Hi Grps
 		MyFlashBackdrop = { fg = palette.mulberry, bg = "NONE", italic = false }, -- backdrop
 		MyFlashMatch = { bg = palette.magenta, fg = palette.ebony }, -- search matches
 		MyFlashCurrent = { bg = palette.yellow, fg = palette.ebony }, -- current match
