@@ -1,4 +1,4 @@
-local function createLanguagesGroup(palette, zitch)
+local function createLanguagesGroup(palette, config)
   return {
     -- CSS
     cssTagName = zitch.Purple,
