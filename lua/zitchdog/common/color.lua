@@ -31,11 +31,11 @@ function color.blend(fg, bg, alpha)
 end
 
 function color.darken(hex, amount, bg)
-	return color.blend(hex, bg or background, math.abs(amount))
+	return color.blend(hex, bg, math.abs(amount))
 end
 
 function color.lighten(hex, amount, fg)
-	return color.blend(hex, fg or foreground, math.abs(amount))
+	return color.blend(hex, fg, math.abs(amount))
 end
 
 function color.brighten(colour, percentage)
