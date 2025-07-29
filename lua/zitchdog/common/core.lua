@@ -23,14 +23,16 @@ function core.createHighlightCommands(groups)
 	return commands
 end
 
-function core.createPaletteByPattern(pattern)
+function core.createPaletteByVariant(variant)
 	local palette = require("zitchdog.common.palette")
 
 	local function normalizeHex(hex)
 		return string.sub(hex, 1, 7)
 	end
 
-	if pattern == "zitchdog-night" then
+	local variant_name
+	if variant == "night" or variant == "zitchdog-night" then
+		variant_name = "zitchdog-night"
 		palette.purple = normalizeHex("#a277ff")
 		palette.green = normalizeHex("#61ffca")
 		palette.orange = normalizeHex("#ffca85")
@@ -42,7 +44,7 @@ function core.createPaletteByPattern(pattern)
 		palette.gray = normalizeHex("#6d6d6d")
 		palette.ash = normalizeHex("#29263c")
 		palette.black = normalizeHex("#15141b")
-		palette.darkblack = normalizeHex("#131218 ")
+		palette.darkblack = normalizeHex("#131218")
 		palette.magenta = normalizeHex("#a277ff")
 		palette.yellow = normalizeHex("#ffca85")
 		palette.mauve = normalizeHex("#3d375e7f")
@@ -63,7 +65,8 @@ function core.createPaletteByPattern(pattern)
 		palette.teal = normalizeHex("#0e5e59")
 		palette.lightblack = normalizeHex("#1a1b26")
 		palette.darkblack = normalizeHex("#131218")
-	elseif pattern == "zitchdog-pine" then
+	elseif variant == "pine" or variant == "zitchdog-pine" then
+		variant_name = "zitchdog-pine"
 		palette.purple = normalizeHex("#844364")
 		palette.green = normalizeHex("#46914d")
 		palette.orange = normalizeHex("#e47833")
@@ -96,7 +99,8 @@ function core.createPaletteByPattern(pattern)
 		palette.teal = normalizeHex("#083122")
 		palette.lightblack = normalizeHex("#100d17")
 		palette.darkblack = normalizeHex("#0b080e")
-	elseif pattern == "zitchdog-grape" then
+	elseif variant == "grape" or variant == "zitchdog-grape" then
+		variant_name = "zitchdog-grape"
 		palette.purple = normalizeHex("#8543e4")
 		palette.green = normalizeHex("#46cda8")
 		palette.orange = normalizeHex("#e39069")
@@ -131,7 +135,7 @@ function core.createPaletteByPattern(pattern)
 		palette.darkblack = normalizeHex("#0b080e")
 	end
 
-	return palette
+	return palette, variant_name
 end
 
 function core.createZitchPattern(palette)
@@ -177,23 +181,23 @@ function core.createZitchPattern(palette)
 	}
 end
 
-function core.createGroups(palette)
+function core.createGroups(palette, config)
 	local util = require("zitchdog.common.util")
 	local groups = {}
 	local pattern = core.createZitchPattern(palette)
 
-	util.mergeTo(groups, require("zitchdog.groups.editor").create(palette, pattern))
-	util.mergeTo(groups, require("zitchdog.groups.languages").create(palette, pattern))
-	util.mergeTo(groups, require("zitchdog.groups.treesitter").create(palette, pattern))
+	util.mergeTo(groups, require("zitchdog.groups.editor").create(palette, pattern, config))
+	util.mergeTo(groups, require("zitchdog.groups.languages").create(palette, pattern, config))
+	util.mergeTo(groups, require("zitchdog.groups.treesitter").create(palette, pattern, config))
 
 	return groups
 end
 
-function core.createTheme(palette)
+function core.createTheme(palette, config)
 	local color = require("zitchdog.common.color")
 
 	vim.g.terminal_color_0 = palette.black
-	vim.g.terminal_color_8 = color.darken(palette.black, 0.4)
+	vim.g.terminal_color_8 = color.darken(palette.black, 0.4, palette.black)
 
 	vim.g.terminal_color_1 = palette.red
 	vim.g.terminal_color_9 = palette.red
@@ -216,7 +220,7 @@ function core.createTheme(palette)
 	vim.g.terminal_color_7 = palette.white
 	vim.g.terminal_color_15 = palette.white
 
-	local groups = core.createGroups(palette)
+	local groups = core.createGroups(palette, config)
 	local commands = core.createHighlightCommands(groups)
 
 	vim.api.nvim_command("hi clear")
