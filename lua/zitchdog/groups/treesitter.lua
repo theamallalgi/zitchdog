@@ -1,4 +1,4 @@
-local function createTreeSitterGroup(palette, zitch)
+local function createTreeSitterGroup(palette, zitch, config)
   return {
     TSNone = {},
     TSError = { fg = palette.red, gui = "bold,underline" },
