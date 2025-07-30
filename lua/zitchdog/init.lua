@@ -1,32 +1,25 @@
 local zitch = {}
 
-zitch.config = {
-	transparent_bg = false, -- a boolean to toggle transparent background
-	variant = "grape", -- the default colorscheme
-	italic_comments = false, -- a boolean to toggle italic comments
-	colors = {}, -- a table of colors to override the default palette
-}
+zitch.config = require("zitchdog.config").options
 
 function zitch.setup(opts)
 	opts = opts or {}
 	zitch.config = vim.tbl_deep_extend("force", zitch.config, opts)
+end
 
-	vim.o.termguicolors = true
-	vim.o.background = "dark"
+function zitch.load(opts)
+  if opts then
+    zitch.setup(opts)
+  end
 
-	local core = require("zitchdog.common.core")
-	local palette, variant_name = core.createPaletteByVariant(zitch.config.variant)
+  vim.o.termguicolors = true
+  vim.o.background = "dark"
 
-	-- Apply user-defined color overrides
-	for color_name, color_value in pairs(zitch.config.colors) do
-		if palette[color_name] then
-			palette[color_name] = color_value
-		end
-	end
+  local core = require("zitchdog.common.core")
+  local palette, variant_name = core.createPaletteByVariant(zitch.config.variant)
+  vim.g.colors_name = "zitchdog-" .. zitch.config.variant
 
-	vim.g.colors_name = variant_name
-
-	core.createTheme(palette, zitch.config)
+  core.createTheme(palette, zitch)
 end
 
 return zitch

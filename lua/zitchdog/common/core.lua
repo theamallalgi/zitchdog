@@ -24,117 +24,8 @@ function core.createHighlightCommands(groups)
 end
 
 function core.createPaletteByVariant(variant)
-	local palette = require("zitchdog.common.palette")
-
-	local function normalizeHex(hex)
-		return string.sub(hex, 1, 7)
-	end
-
-	local variant_name
-	if variant == "night" or variant == "zitchdog-night" then
-		variant_name = "zitchdog-night"
-		palette.purple = normalizeHex("#a277ff")
-		palette.green = normalizeHex("#61ffca")
-		palette.orange = normalizeHex("#ffca85")
-		palette.coral = normalizeHex("#ff7b7b")
-		palette.cyan = normalizeHex("#26f9eb")
-		palette.red = normalizeHex("#ff6767")
-		palette.pink = normalizeHex("#f694ff")
-		palette.white = normalizeHex("#f6ceff")
-		palette.gray = normalizeHex("#6d6d6d")
-		palette.ash = normalizeHex("#29263c")
-		palette.black = normalizeHex("#15141b")
-		palette.darkblack = normalizeHex("#131218")
-		palette.magenta = normalizeHex("#a277ff")
-		palette.yellow = normalizeHex("#ffca85")
-		palette.mauve = normalizeHex("#3d375e7f")
-		palette.blue = normalizeHex("#82e2ff")
-		palette.charcoal = normalizeHex("#15141b")
-		palette.slate = normalizeHex("#542a91")
-		palette.graphite = normalizeHex("#272045")
-		palette.lilac = normalizeHex("#776eae")
-		palette.amethyst = normalizeHex("#333352")
-		palette.aubergine = normalizeHex("#232338")
-		palette.ebony = normalizeHex("#12121c")
-		palette.maroon = normalizeHex("#652929")
-		palette.pine = normalizeHex("#123127")
-		palette.indigo = normalizeHex("#345a65")
-		palette.umber = normalizeHex("#4b3b27")
-		palette.clay = normalizeHex("#4b2424")
-		palette.mulberry = normalizeHex("#433e62")
-		palette.teal = normalizeHex("#0e5e59")
-		palette.lightblack = normalizeHex("#1a1b26")
-		palette.darkblack = normalizeHex("#131218")
-	elseif variant == "pine" or variant == "zitchdog-pine" then
-		variant_name = "zitchdog-pine"
-		palette.purple = normalizeHex("#844364")
-		palette.green = normalizeHex("#46914d")
-		palette.orange = normalizeHex("#e47833")
-		palette.coral = normalizeHex("#e4462f")
-		palette.cyan = normalizeHex("#188e5c")
-		palette.red = normalizeHex("#e43728")
-		palette.pink = normalizeHex("#da5b64")
-		palette.white = normalizeHex("#da7a64")
-		palette.gray = normalizeHex("#513c2a")
-		palette.ash = normalizeHex("#191219")
-		palette.black = normalizeHex("#0d0910")
-		palette.darkblack = normalizeHex("#0b080e")
-		palette.magenta = normalizeHex("#834264")
-		palette.yellow = normalizeHex("#e37832")
-		palette.mauve = normalizeHex("#281b24")
-		palette.blue = normalizeHex("#658265")
-		palette.charcoal = normalizeHex("#0d0910")
-		palette.slate = normalizeHex("#542a91")
-		palette.graphite = normalizeHex("#272045")
-		palette.lilac = normalizeHex("#5a3b42")
-		palette.amethyst = normalizeHex("#201520")
-		palette.aubergine = normalizeHex("#151019")
-		palette.ebony = normalizeHex("#0a090f")
-		palette.maroon = normalizeHex("#481214")
-		palette.pine = normalizeHex("#0a1613")
-		palette.indigo = normalizeHex("#212e27")
-		palette.umber = normalizeHex("#321c12")
-		palette.clay = normalizeHex("#331011")
-		palette.mulberry = normalizeHex("#2d1e26")
-		palette.teal = normalizeHex("#083122")
-		palette.lightblack = normalizeHex("#100d17")
-		palette.darkblack = normalizeHex("#0b080e")
-	elseif variant == "grape" or variant == "zitchdog-grape" then
-		variant_name = "zitchdog-grape"
-		palette.purple = normalizeHex("#8543e4")
-		palette.green = normalizeHex("#46cda8")
-		palette.orange = normalizeHex("#e39069")
-		palette.coral = normalizeHex("#e4465d")
-		palette.cyan = normalizeHex("#17c5cb")
-		palette.red = normalizeHex("#e4384c")
-		palette.pink = normalizeHex("#d95be2")
-		palette.white = normalizeHex("#db94e3")
-		palette.gray = normalizeHex("#513b50")
-		palette.ash = normalizeHex("#191324")
-		palette.black = normalizeHex("#0d0910")
-		palette.darkblack = normalizeHex("#0b080e")
-		palette.magenta = normalizeHex("#8443e4")
-		palette.yellow = normalizeHex("#e09066")
-		palette.mauve = normalizeHex("#281a42")
-		palette.blue = normalizeHex("#64aae2")
-		palette.charcoal = normalizeHex("#0d0910")
-		palette.slate = normalizeHex("#542a91")
-		palette.graphite = normalizeHex("#272045")
-		palette.lilac = normalizeHex("#5a3c8d")
-		palette.amethyst = normalizeHex("#201638")
-		palette.aubergine = normalizeHex("#150f25")
-		palette.ebony = normalizeHex("#09080e")
-		palette.maroon = normalizeHex("#481219")
-		palette.pine = normalizeHex("#0b1618")
-		palette.indigo = normalizeHex("#212f4a")
-		palette.umber = normalizeHex("#331b17")
-		palette.clay = normalizeHex("#331016")
-		palette.mulberry = normalizeHex("#2e1d46")
-		palette.teal = normalizeHex("#08313f")
-		palette.lightblack = normalizeHex("#100d17")
-		palette.darkblack = normalizeHex("#0b080e")
-	end
-
+	local palette = require("zitchdog.common.palette").variants[variant]
+	local variant_name = "zitchdog-" .. variant
 	return palette, variant_name
 end
 
@@ -181,19 +72,11 @@ function core.createZitchPattern(palette)
 	}
 end
 
-function core.createGroups(palette, config)
-	local util = require("zitchdog.common.util")
-	local groups = {}
-	local pattern = core.createZitchPattern(palette)
-
-	util.mergeTo(groups, require("zitchdog.groups.editor").create(palette, pattern, config))
-	util.mergeTo(groups, require("zitchdog.groups.languages").create(palette, pattern, config))
-	util.mergeTo(groups, require("zitchdog.groups.treesitter").create(palette, pattern, config))
-
-	return groups
+function core.createGroups(palette, zitch)
+	return require("zitchdog.groups").setup(palette, zitch)
 end
 
-function core.createTheme(palette, config)
+function core.createTheme(palette, zitch)
 	local color = require("zitchdog.common.color")
 
 	vim.g.terminal_color_0 = palette.black
@@ -220,7 +103,7 @@ function core.createTheme(palette, config)
 	vim.g.terminal_color_7 = palette.white
 	vim.g.terminal_color_15 = palette.white
 
-	local groups = core.createGroups(palette, config)
+	local groups = core.createGroups(palette, zitch)
 	local commands = core.createHighlightCommands(groups)
 
 	vim.api.nvim_command("hi clear")

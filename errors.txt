@@ -1,0 +1,19 @@
+Error detected while processing C:\Users\amall\AppData\Local\nvim-data\lazy\zitchdog\colors\zitchdog-grape.lua:
+E5113: Error while calling lua chunk: ...vim-data/lazy/zitchdog/lua/zitchdog/groups/languages.lua:4: attempt to index global 'zitch' (a nil value)
+stack traceback:
+	...vim-data/lazy/zitchdog/lua/zitchdog/groups/languages.lua:4: in function 'create'
+	...cal/nvim-data/lazy/zitchdog/lua/zitchdog/common/core.lua:190: in function 'createGroups'
+	...cal/nvim-data/lazy/zitchdog/lua/zitchdog/common/core.lua:223: in function 'createTheme'
+	...Data/Local/nvim-data/lazy/zitchdog/lua/zitchdog/init.lua:29: in function 'setup'
+	.../Local/nvim-data/lazy/zitchdog/colors/zitchdog-grape.lua:1: in main chunk
+                         Failed to run `config` for indent-blankline.nvim
+
+...m-data/lazy/indent-blankline.nvim/lua/ibl/highlights.lua:65: No highlight group 'AlphaFooter' found
+
+# stacktrace:
+  - indent-blankline.nvim\lua\ibl\highlights.lua:65 _in_ **setup**
+  - indent-blankline.nvim\lua\ibl\init.lua:41 _in_ **setup**
+  - indent-blankline.nvim\lua\ibl\init.lua:57 _in_ **setup**
+  - lua/amal/plugins/indentblankline.lua:7 _in_ **config**
+  - lua/amal/lazy.lua:16
+  - init.lua:6
