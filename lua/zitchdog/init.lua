@@ -1,25 +1,25 @@
-local zitch = {}
+local config = require("zitchdog.config").options
 
-zitch.config = require("zitchdog.config").options
+local M = {}
 
-function zitch.setup(opts)
+function M.setup(opts)
 	opts = opts or {}
-	zitch.config = vim.tbl_deep_extend("force", zitch.config, opts)
+	config = vim.tbl_deep_extend("force", config, opts)
 end
 
-function zitch.load(opts)
-  if opts then
-    zitch.setup(opts)
-  end
+function M.load(opts)
+	if opts then
+		M.setup(opts)
+	end
 
-  vim.o.termguicolors = true
-  vim.o.background = "dark"
+	vim.o.termguicolors = true
+	vim.o.background = "dark"
 
-  local core = require("zitchdog.common.core")
-  local palette, variant_name = core.createPaletteByVariant(zitch.config.variant)
-  vim.g.colors_name = "zitchdog-" .. zitch.config.variant
+	local core = require("zitchdog.common.core")
+	local palette, variant_name = core.createPaletteByVariant(config.variant)
+	vim.g.colors_name = "zitchdog-" .. config.variant
 
-  core.createTheme(palette, zitch)
+	core.createTheme(palette, config)
 end
 
-return zitch
+return M

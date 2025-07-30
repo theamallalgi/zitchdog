@@ -72,11 +72,11 @@ function core.createZitchPattern(palette)
 	}
 end
 
-function core.createGroups(palette, zitch)
-	return require("zitchdog.groups").setup(palette, zitch)
+function core.createGroups(palette, config)
+	return require("zitchdog.groups").setup(palette, config)
 end
 
-function core.createTheme(palette, zitch)
+function core.createTheme(palette, config)
 	local color = require("zitchdog.common.color")
 
 	vim.g.terminal_color_0 = palette.black
@@ -103,7 +103,7 @@ function core.createTheme(palette, zitch)
 	vim.g.terminal_color_7 = palette.white
 	vim.g.terminal_color_15 = palette.white
 
-	local groups = core.createGroups(palette, zitch)
+	local groups = core.createGroups(palette, config)
 	local commands = core.createHighlightCommands(groups)
 
 	vim.api.nvim_command("hi clear")
