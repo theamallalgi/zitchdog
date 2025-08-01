@@ -44,7 +44,7 @@ function M.create(palette, zitch_pattern, config)
 		NormalFloat = { bg = palette.darkblack },
 		WinBarNC = { bg = palette.darkblack },
 		WinBar = { bg = palette.darkblack },
-		CurSearch = { fg = palette.green, bg = palette.pine },
+		CurSearch = { fg = palette.cyan, bg = palette.teal },
 
 		Comment = { fg = palette.gray, gui = config.italic_comments and "italic" or "NONE" },
 		Constant = zitch_pattern.Purple,
@@ -313,7 +313,6 @@ function M.create(palette, zitch_pattern, config)
 		PmenuSbar = { bg = palette.amethyst },
 		WildMenu = { fg = palette.purple, bg = palette.graphite },
 		Visual = { bg = palette.graphite },
-		Search = { fg = palette.purple, bg = palette.graphite },
 		Question = { fg = palette.purple },
 		ModeMsg = { fg = palette.white, style = "bold" },
 		MoreMsg = { fg = palette.white, style = "bold" },
