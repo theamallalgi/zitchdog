@@ -41,10 +41,10 @@ function M.create(palette, zitch_pattern, config)
 		Title = zitch_pattern.GreenBold,
 		VisualNOS = { bg = palette.mauve, gui = "inverse" },
 		WarningMsg = { fg = palette.orange, bg = bg, gui = "bold" },
-    NormalFloat = { bg = palette.darkblack },
-    WinBarNC = { bg = palette.darkblack },
-    WinBar = { bg = palette.darkblack },
-    CurSearch = { fg = palette.darkblack },
+		NormalFloat = { bg = palette.darkblack },
+		WinBarNC = { bg = palette.darkblack },
+		WinBar = { bg = palette.darkblack },
+		CurSearch = { fg = palette.green, bg = palette.pine },
 
 		Comment = { fg = palette.gray, gui = config.italic_comments and "italic" or "NONE" },
 		Constant = zitch_pattern.Purple,
@@ -334,4 +334,3 @@ function M.create(palette, zitch_pattern, config)
 end
 
 return M
-
