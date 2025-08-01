@@ -4,14 +4,14 @@ local palettes = require("zitchdog.common.palette").variants
 
 local function get_palette()
   local current_colorscheme = vim.g.colors_name
-  if current_colorscheme == "zitchdog-night" then
-    return palettes.night
+  if current_colorscheme == "zitchdog-dune" then
+    return palettes.dune
   elseif current_colorscheme == "zitchdog-pine" then
     return palettes.pine
   elseif current_colorscheme == "zitchdog-grape" then
     return palettes.grape
   else
-    return palettes.night -- Default to night
+    return palettes.dune -- Default to dune
   end
 end
 
