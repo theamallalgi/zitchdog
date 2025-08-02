@@ -1,38 +1,29 @@
-![HEADER IMAGE](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/header.png?raw=true)
+![HEADER IMAGE](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/header.png?raw=true)
+
 # Zitchdog 🦑
-a minimal nvim theme based up on [aura theme](https://github.com/daltonmenezes/aura-theme/), but with added variants for much more fun!
+A minimal purple based soothing colorscheme (for neovim and much more!) inspired by [The Aura Theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants for much more fun!
 
 ## Theme Variants
 
-<details>
-	<summary>🍇 Zitchdog Grape Variant</summary>
+<details open>
+	<summary>🍇 Variant: Grape</summary>
 </br>
 
-![Grape Variant](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/grape-3.jpg?raw=true)
+![Grape Variant](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-1.png?raw=true)
 </details>
 
-<details>
-	<summary>🏜️ Zitchdog Dune Variant</summary>
-</br>
-
-![Dune Variant](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/dune-3.jpg?raw=true)
-</details>
-
-<details>
-	<summary>🌲 Zitchdog Pine Variant</summary>
+<details open>
+	<summary>🌲 Variant: Pine</summary>
 	</br>
 
-![Pine Variant](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/pine-3.jpg?raw=true)
+![Pine Variant](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-1.png?raw=true)
 </details>
 
 ## Features
 
-- Supports the latest [Neovim](https://github.com/neovim/neovim)
-  [0.10.0](https://github.com/neovim/neovim/releases/tag/v0.10.2) features.
 - Multiple Theme Variants.
 - Supports tons of major plugins.
-- Provides [Zitchdog](https://github.com/theamallalgi/zitchdog)
-  [extras](https://github.com/theamallalgi/zitchdog/tree/main/extras) for numerous other applications.
+- Provides [Extra Configs](https://github.com/theamallalgi/zitchdog/tree/main/extras) for numerous other applications.
 
 <details>
 <summary>List of Supported Plugins</summary>
@@ -146,13 +137,12 @@ a minimal nvim theme based up on [aura theme](https://github.com/daltonmenezes/a
 
 ## Requirements
 - Neovim: Version >= 0.8.0
-- Nerd Font (Jetbrains Mono)*
-- Terminal Emulator (Alacritty)*
-- Plugin Manager (Lazy)*
+- Patched Nerd Font(s) for Glyph Support (for extras)
+- Neovim Plugin Manager
 
 ## Installation
 
-Install with Package Man (I use Lazy)
+Using Lazy Plugin Manager
 ```lua
 {
   "theamallalgi/zitchdog",
@@ -160,58 +150,68 @@ Install with Package Man (I use Lazy)
   priority = 1000,
 }
 ```
+Using Packer
+```vim
+use "zitchdog/zitchdog.nvim"
+```
+
+Using vim-plug
+```vim
+Plug "zitchdog/zitchdog.nvim"
+```
 
 ## Usage
-currently there are 3 available variants - `zitchdog-grape`, `zitchdog-pine`, `zitchdog-dune`
+currently there are 2 available variants - `zitchdog-grape`, `zitchdog-pine`
 
-Set with `Vimscript`
-```vim
-colorscheme zitchdog-grape " zitchdog-(grape/pine/dune)
-```
-Set inside `Nvim (Lua)`
+- Set the Colorscheme in your init.lua file or a specific plugin file etc.
+
 ```lua
-nvim.cmd[[colorscheme zitchdog-grape]] -- zitchdog-(grape/pine/dune)
+-- To load the default theme (grape)
+require("zitchdog").load()
+
+-- To load a specific theme
+require("zitchdog").load({ variant = "pine" })
+```
+
+- Further Configuration
+
+```lua
+-- Default configuration
+require("zitchdog").setup({
+  transparent_bg = false, -- a boolean to toggle transparent background
+  variant = "grape", -- the default colorscheme
+  italic_comments = false, -- a boolean to toggle italic comments
+  colors = {}, -- a table of colors to override the default palette
+})
+
+-- To change the theme, you can use the `variant` option:
+require("zitchdog").setup({
+  variant = "pine",
+})
+
+-- Or load the theme directly:
+require("zitchdog").load({ variant = "pine" })
 ```
 
 ## Gallery
 
 <details open>
-	<summary>Shots of the Grape Variant</summary>
+	<summary>Some Screengrabs of the Grape Variant</summary>
 	</br>
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/grape-1.jpg?raw=true)
+![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-2.png?raw=true)
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/grape-2.jpg?raw=true)
-
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/grape-3.jpg?raw=true)
-</details>
-
-<details open>
-	<summary>Shots of the Dune Variant</summary>
-	</br>
-	
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/dune-1.jpg?raw=true)
-
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/dune-2.jpg?raw=true)
-
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/dune-3.jpg?raw=true)
-
-![Bufferline2](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/bufferline.png?raw=true)
-
-![Simple](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/file.png?raw=true)
-
-![Neotree1](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/neotree%20(bufferline).png?raw=true)
-
-![Telescope](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/telescope.png?raw=true)
+![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-2.png?raw=true)
 </details>
 
 <details open>
 	<summary>Shots of the Pine Variant</summary>
 	</br>
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/pine-1.jpg?raw=true)
+![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-2.png?raw=true)
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/pine-2.jpg?raw=true)
-
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/dependencies/pine-3.jpg?raw=true)
+![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-3.png?raw=true)
 </details>
+
+> [!NOTE]
+> More cool stuff is on the way, see ya soon!
