@@ -152,12 +152,12 @@ Using Lazy Plugin Manager
 ```
 Using Packer
 ```vim
-use "zitchdog/zitchdog.nvim"
+use "theamallalgi/zitchdog.nvim"
 ```
 
 Using vim-plug
 ```vim
-Plug "zitchdog/zitchdog.nvim"
+Plug "theamallalgi/zitchdog.nvim"
 ```
 
 ## Usage
