@@ -201,7 +201,7 @@ require("zitchdog").load({ variant = "pine" })
 
 ![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-2.png?raw=true)
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-2.png?raw=true)
+![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-3.png?raw=true)
 </details>
 
 <details open>
