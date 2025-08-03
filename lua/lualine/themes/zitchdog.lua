@@ -11,48 +11,43 @@ local function get_palette()
   elseif current_colorscheme == "zitchdog-grape" then
     return palettes.grape
   else
-    return palettes.dune -- Default to dune
+    return palettes.grape -- Default to grape
   end
 end
 
-local p = get_palette()
+local colors = get_palette()
 
-M.normal = {
-  a = { fg = p.purple, bg = p.lightblack },
-  b = { fg = p.slate, bg = p.darkblack },
-  c = { fg = p.slate, bg = p.darkblack },
-  x = { fg = p.slate, bg = p.darkblack },
-  y = { fg = p.red },
-  z = { fg = p.green, bg = p.pine },
-}
-M.insert = {
-  a = { fg = p.green, bg = p.pine },
-  b = { fg = p.red, bg = p.maroon },
-  z = { fg = p.green, bg = p.pine },
-  y = { fg = p.slate, bg = p.darkblack },
-}
-M.visual = {
-  a = { fg = p.yellow, bg = p.umber },
-  b = { fg = p.red, bg = p.maroon },
-  z = { fg = p.yellow, bg = p.umber },
-  y = { fg = p.slate, bg = p.darkblack },
-}
-M.replace = {
-  a = { fg = p.red, bg = p.maroon },
-  b = { fg = p.red, bg = p.maroon },
-  z = { fg = p.red, bg = p.maroon },
-  y = { fg = p.slate, bg = p.darkblack },
-}
-M.command = {
-  a = { fg = p.coral, bg = p.clay },
-  b = { fg = p.red, bg = p.maroon },
-  z = { fg = p.coral, bg = p.clay },
-  y = { fg = p.slate, bg = p.darkblack },
-}
-M.inactive = {
-  a = { fg = p.graphite, bg = p.magenta },
-  b = { fg = p.graphite, bg = p.magenta },
-  c = { fg = p.graphite },
+M = {
+	normal = {
+		a = { fg = colors.black, bg = colors.purple, gui = "bold" },
+		b = { fg = colors.white, bg = colors.mauve },
+		c = { fg = colors.white, bg = colors.ash },
+	},
+	insert = {
+		a = { fg = colors.black, bg = colors.green, gui = "bold" },
+		b = { fg = colors.white, bg = colors.mauve },
+		c = { fg = colors.white, bg = colors.ash },
+	},
+	visual = {
+		a = { fg = colors.black, bg = colors.orange, gui = "bold" },
+		b = { fg = colors.white, bg = colors.mauve },
+		c = { fg = colors.white, bg = colors.ash },
+	},
+	replace = {
+		a = { fg = colors.black, bg = colors.coral, gui = "bold" },
+		b = { fg = colors.white, bg = colors.mauve },
+		c = { fg = colors.white, bg = colors.ash },
+	},
+	command = {
+		a = { fg = colors.black, bg = colors.cyan, gui = "bold" },
+		b = { fg = colors.white, bg = a.mauve },
+		c = { fg = colors.white, bg = colors.ash },
+	},
+	inactive = {
+		a = { fg = colors.white, bg = colors.ash, gui = "bold" },
+		b = { fg = colors.white, bg = colors.ash },
+		c = { fg = colors.white, bg = colors.ash },
+	},
 }
 
 return M
