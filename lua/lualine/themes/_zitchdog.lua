@@ -9,7 +9,7 @@ local function get_palette(variant)
   elseif variant == "zitchdog-pine" then
     return palettes.pine
   else
-    return palettes.grape
+    return palettes.pine
   end
 end
 
