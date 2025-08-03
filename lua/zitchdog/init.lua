@@ -20,7 +20,7 @@ function M.load(opts)
 	vim.g.colors_name = "zitchdog-" .. config.variant
 
 	core.createTheme(palette, config)
-  require("zitchdog.lualine")
+  
 end
 
 return M
