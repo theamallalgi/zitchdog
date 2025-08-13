@@ -172,7 +172,7 @@ function M.create(palette, zitch_pattern, config)
     NeoTreeNormal = { bg = config.transparent_bg and "NONE" or palette.darkblack, fg = palette.magenta },
     NeoTreeNormalNC = { bg = config.transparent_bg and "NONE" or palette.darkblack, fg = palette.magenta },
     NeoTreeEndOfBuffer = { bg = config.transparent_bg and "NONE" or palette.darkblack, fg = palette.magenta },
-    NeoTreeWinSeparator = { bg = config.transparent_bg and "NONE" or palette.darkblack, fg = palette.slate },
+    NeoTreeWinSeparator = { bg = config.transparent_bg and "NONE" or palette.darkblack, fg = palette.aubergine },
 		NeoTreeFloatNormal = { bg = config.transparent_bg and "NONE" or palette.darkblack, fg = palette.magenta },
 		NeoTreeFloatTitle = { bg = palette.mulberry, fg = palette.magenta },
     NeoTreeIndentMarker = { bg = "NONE", fg = palette.gray },
