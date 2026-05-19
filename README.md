@@ -1,4 +1,4 @@
-![HEADER IMAGE](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/header.png?raw=true)
+![HEADER IMAGE](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/header.jpg?raw=true)
 
 # Zitchdog 🦑
 A minimal purple based soothing colorscheme (for neovim and much more!) inspired by [The Aura Theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants for much more fun!
@@ -25,8 +25,6 @@ A minimal purple based soothing colorscheme (for neovim and much more!) inspired
 - Supports tons of major plugins.
 - Provides [Extra Configs](https://github.com/theamallalgi/zitchdog/tree/main/extras) for numerous other applications.
 - Does NOT have a light mode (Yes it's a feature!)
-
-![Wisdom Poster](https://github.com/theamallalgi/zitchdog/blob/dev/docs/assets/wisdom.png?raw=true)
 
 <details>
 <summary>List of Supported Plugins</summary>
