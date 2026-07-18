@@ -1,10 +1,12 @@
 local M = {}
 
 M.options = {
-	transparent_bg = false, -- a boolean to toggle transparent background
-	variant = "grape", -- the default colorscheme
-	italic_comments = false, -- a boolean to toggle italic comments
-	colors = {}, -- a table of colors to override the default palette
+	transparent_bg = false, -- boolean, toggles a transparent background
+	variant = "grape", -- the default colorscheme variant
+	italic_comments = false, -- boolean, toggles italic comments
+	fg = nil, -- override the base foreground (defaults to the variant's white)
+	bg = nil, -- override the base background (defaults to the variant's black; ignored when transparent_bg = true)
+	colors = {}, -- override any specific palette color, e.g. { red = "#ff0000", purple = "#a277ff" }
 }
 
 return M
