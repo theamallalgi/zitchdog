@@ -1,0 +1,35 @@
+gui:
+  theme:
+    activeBorderColor:
+      - '#8443e3'
+      - bold
+    inactiveBorderColor:
+      - '#2c1e36'
+    optionsTextColor:
+      - '#65aae3'
+    selectedLineBgColor:
+      - '#201638'
+    selectedRangeBgColor:
+      - '#331016'
+    cherryPickedCommitBgColor:
+      - '#0b1618'
+    cherryPickedCommitFgColor:
+      - '#46cda8'
+    unstagedChangesColor:
+      - '#e4374b'
+    defaultFgColor:
+      - '#8443e3'
+    searchingActiveBorderColor:
+      - '#18c6cd'
+  authorColors:
+    # '*': '#6ebad7'
+    '*': '#e49068'
+  branchColors:
+    'main': '#46cda8'
+    'master': '#46cda8'
+    'develop': '#65aae3'
+    'feat/*': '#e49068'
+    'fix/*': '#e4374b'
+    'chore/*': '#937b99'
+  nerdFontsVersion: '3'
+  border: single # single / double / block / bold / hidden / rounded (d)
