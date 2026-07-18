@@ -16,7 +16,7 @@ function M.load(opts)
 	vim.o.background = "dark"
 
 	local core = require("zitchdog.common.core")
-	local palette, variant_name = core.createPaletteByVariant(config.variant, config)
+  local palette = core.createPaletteByVariant(config.variant, config)
 	vim.g.colors_name = "zitchdog-" .. config.variant
 
 	core.createTheme(palette, config)

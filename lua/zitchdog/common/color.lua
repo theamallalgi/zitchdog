@@ -1,10 +1,10 @@
 local hsluv = require("zitchdog.common.hsluv")
-local palette = require("zitchdog.common.palette")
+-- local palette = require("zitchdog.common.palette")
 
 local color = {}
 
-local foreground = "#da8774"
-local background = "#0d0910"
+-- local foreground = "#da8774"
+-- local background = "#0d0910"
 
 local function hexToRGB(hexstr)
 	local hex = "[abcdef0-9][abcdef0-9]"
