@@ -29,7 +29,7 @@ function M.create(palette, zitch_pattern, config)
 		PmenuSel = { fg = palette.magenta, bg = palette.mulberry, gui = "bold" },
 		PmenuSbar = { bg = bg },
 		PmenuThumb = { bg = palette.magenta },
-		Search = { fg = bg, bg = palette.yellow },
+		Search = { fg = palette.umber, bg = palette.yellow },
 		SpecialKey = zitch_pattern.Foreground,
 		SpellBad = zitch_pattern.RedUnderline,
 		SpellCap = zitch_pattern.OrangeUnderline,
@@ -140,10 +140,10 @@ function M.create(palette, zitch_pattern, config)
 		-- BlinkCmpSignatureHelpActiveParameter = {},
 
 		-- Custom Flash Hi Grps
-		MyFlashBackdrop = { fg = palette.mulberry, bg = "NONE", italic = false }, -- backdrop
-		MyFlashMatch = { bg = palette.magenta, fg = palette.ebony }, -- search matches
-		MyFlashCurrent = { bg = palette.yellow, fg = palette.ebony }, -- current match
-		MyFlashLabel = { bg = palette.red, fg = palette.ebony }, -- jump label
+		FlashBackdrop = { fg = palette.mulberry, bg = "NONE", italic = false }, -- backdrop
+		FlashMatch = { bg = palette.magenta, fg = palette.ebony }, -- search matches
+		FlashCurrent = { bg = palette.yellow, fg = palette.ebony }, -- current match
+		FlashLabel = { bg = palette.red, fg = palette.ebony }, -- jump label
 
 		TelescopePromptBorder = { fg = palette.magenta },
 		TelescopePromptNormal = { fg = palette.magenta, bg = config.transparent_bg and "NONE" or palette.charcoal },
