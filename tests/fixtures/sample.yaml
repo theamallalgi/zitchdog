@@ -1,0 +1,15 @@
+name: zitchdog
+version: 1.0.0
+variants:
+  - dune
+  - grape
+  - pine
+config:
+  transparent_bg: false
+  italic_comments: true
+  timeout: 500
+dependencies:
+  - name: telescope.nvim
+    optional: true
+  - name: gitsigns.nvim
+    optional: false
