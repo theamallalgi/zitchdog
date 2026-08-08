@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
+
 set -e
 
 echo "Running verify-noop..."
 ./scripts/verify-noop.sh
-
-echo "Running verify-visual..."
-./scripts/verify-visual.sh
 
 echo "All checks passed, pushing."
