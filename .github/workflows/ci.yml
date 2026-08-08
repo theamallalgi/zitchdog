@@ -14,6 +14,7 @@ jobs:
       - name: Check formatting
         uses: JohnnyMorganz/stylua-action@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
           args: --check lua/
 
@@ -22,3 +23,4 @@ jobs:
 
       - name: Run luacheck
         run: luacheck lua/ --globals vim
+
