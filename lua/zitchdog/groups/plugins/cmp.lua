@@ -16,7 +16,7 @@ function M.create(palette, zitch_pattern, config)
 		CmpItemAbbrMatch = { bg = "NONE", fg = palette.green, bold = true },
 		CmpItemAbbrMatchFuzzy = { bg = "NONE", fg = palette.orange },
 
-    -- blink.cmp
+		-- blink.cmp
 		BlinkCmpMenu = { fg = palette.magenta, bg = bg },
 		BlinkCmpMenuBorder = { bg = bg, fg = palette.magenta },
 		BlinkCmpMenuSelection = { bg = palette.mulberry, gui = "bold" },
