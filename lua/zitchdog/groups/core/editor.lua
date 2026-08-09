@@ -77,10 +77,10 @@ function M.create(palette, zitch_pattern, config)
 		User8 = { fg = palette.purple, bg = palette.amethyst, bold = true },
 		User9 = { fg = palette.green, bg = palette.pine, bold = true },
 
-    -- tabline
-    TabLine = { fg = palette.slate, bg = palette.aubergine, italic = false },
-    TabLineFill = { fg = palette.slate, bg = palette.darkblack },
-    TabLineSel = { fg = palette.purple, bg = darkBg, bold = true },
+		-- tabline
+		TabLine = { fg = palette.slate, bg = palette.aubergine, italic = false },
+		TabLineFill = { fg = palette.slate, bg = palette.darkblack },
+		TabLineSel = { fg = palette.purple, bg = darkBg, bold = true },
 
 		-- netrw
 		netrwDir = { bg = "NONE", fg = palette.yellow, bold = true },
