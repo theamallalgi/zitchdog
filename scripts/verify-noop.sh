@@ -22,6 +22,7 @@ trap cleanup EXIT
 
 echo -e "${BOLD}Setting up worktree for '$BASE_BRANCH'...${RESET}"
 git worktree add --force "$WORKTREE_DIR" "$BASE_BRANCH" >/dev/null
+echo "------"
 
 mkdir -p "$WORKTREE_DIR/scripts"
 cp scripts/minimal_init.lua "$WORKTREE_DIR/scripts/minimal_init.lua"
@@ -62,6 +63,7 @@ for variant in "${VARIANTS[@]}"; do
 	fi
 done
 
+echo "------"
 if [[ $fail -eq 0 ]]; then
 	echo -e "${GREEN}${BOLD}ALL VARIANTS PASSED${RESET}"
 else

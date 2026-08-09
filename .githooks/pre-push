@@ -2,17 +2,21 @@
 
 set -e
 
+echo '------'
 echo "Checking formatting..."
 if ! stylua --check lua/; then
 	echo "Formatting issues found, auto-fixing..."
 	stylua lua/
-	echo ""
-	echo "Files were reformatted. Review the changes, then commit and push again."
+	echo "------"
+	echo "Files were reformatted."
+	echo "Review the changes, then commit and push again."
 	git diff --stat lua/
 	exit 1
 fi
 
 echo "Running verify-noop..."
+echo '------'
 ./scripts/verify-noop.sh
 
-echo "All checks passed, pushing."
+echo '------'
+echo "All checks passed."
