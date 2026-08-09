@@ -10,6 +10,8 @@ function M.create(palette, zitch_pattern, config)
 		Number = zitch_pattern.Green,
 		Boolean = zitch_pattern.Green,
 		["@variable"] = zitch_pattern.Foreground,
+		["@variable.member"] = { fg = palette.blue },
+		["@boolean"] = { fg = palette.yellow, bold = true },
 
 		Identifier = zitch_pattern.Purple,
 		Function = zitch_pattern.Orange,
