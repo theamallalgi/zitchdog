@@ -2,6 +2,7 @@ local M = {}
 
 function M.create(palette, zitch_pattern, config)
 	local bg = config.transparent_bg and "NONE" or palette.black
+	local darkBg = config.transparent_bg and "NONE" or palette.darkblack
 	local groups = {
 		CursorLine = { bg = config.transparent_bg and "NONE" or palette.charcoal },
 		Cursor = { bg = palette.magenta },
@@ -39,10 +40,6 @@ function M.create(palette, zitch_pattern, config)
 		SpellCap = { undercurl = true, sp = palette.orange },
 		SpellRare = { undercurl = true, sp = palette.purple },
 		SpellLocal = { undercurl = true, sp = palette.cyan },
-		TabLine = { fg = palette.gray, bg = bg },
-		-- TabLineFill = { fg = bg, bg = bg },
-		TabLineFill = { bg = palette.amethyst },
-		TabLineSel = { fg = palette.green, bg = bg, gui = "inverse" },
 		Title = zitch_pattern.GreenBold,
 		VisualNOS = { bg = palette.mauve, gui = "inverse" },
 		WarningMsg = { fg = palette.orange, bg = bg, gui = "bold" },
@@ -79,6 +76,11 @@ function M.create(palette, zitch_pattern, config)
 		User7 = { fg = palette.black, bg = palette.darkblack, bold = true },
 		User8 = { fg = palette.purple, bg = palette.amethyst, bold = true },
 		User9 = { fg = palette.green, bg = palette.pine, bold = true },
+
+    -- tabline
+    TabLine = { fg = palette.slate, bg = palette.aubergine, italic = false },
+    TabLineFill = { fg = palette.slate, bg = palette.darkblack },
+    TabLineSel = { fg = palette.purple, bg = darkBg, bold = true },
 
 		-- netrw
 		netrwDir = { bg = "NONE", fg = palette.yellow, bold = true },
