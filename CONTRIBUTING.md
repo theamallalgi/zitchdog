@@ -1,3 +1,5 @@
+<img width="1400" height="784" alt="header2" src="https://github.com/user-attachments/assets/00c5e50f-e3a3-4372-94b4-9405dade4ee8" />
+
 # Contributing to Zitchdog (*Image unrelated)
 
 Thank you for considering contributing to **Zitchdog**. Bug fixes, new plugin support, extras/ports for other tools, documentation improvements, and suggestions are welcome. The goal is to keep Zitchdog simple, and consistent.
