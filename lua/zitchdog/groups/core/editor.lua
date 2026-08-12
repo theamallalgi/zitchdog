@@ -59,7 +59,7 @@ function M.create(palette, zitch_pattern, config)
 		Conceal = { fg = palette.gray },
 		Error = { fg = palette.red },
 		FloatBorder = { fg = palette.magenta },
-		FloatTitle = { fg = palette.magenta },
+		FloatTitle = { fg = palette.purple, bg = palette.amethyst },
 		Float = { fg = palette.magenta },
 
 		-- statuscolumn
