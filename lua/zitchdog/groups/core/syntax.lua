@@ -1,5 +1,9 @@
 local M = {}
 
+---@param palette ZitchdogPalette
+---@param zitch_pattern ZitchdogHighlights
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		-- paste groups here

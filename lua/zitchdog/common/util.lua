@@ -1,3 +1,5 @@
+---@param to table
+---@param from table
 local function mergeTo(to, from)
 	local k, v = next(from, #from ~= 0 and #from or nil)
 

@@ -2,6 +2,7 @@ local M = {}
 
 local palettes = require("zitchdog.common.palette").variants
 
+---@return ZitchdogPalette
 local function get_palette()
 	-- Prefer the palette zitchdog actually applied — this already has
 	-- any fg/bg/colors overrides from setup() baked in.

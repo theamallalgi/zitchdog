@@ -1,5 +1,20 @@
 local M = {}
 
+---@alias ZitchdogVariant
+---| "grape"
+---| "pine"
+---| "dune"
+
+---@class ZitchdogConfig
+---@field transparent_bg boolean
+---@field variant ZitchdogVariant
+---@field variant "grape"|"pine" the default colorscheme variant
+---@field italic_comments boolean
+---@field fg string?
+---@field bg string?
+---@field colors table<string, string>
+
+---@type ZitchdogConfig
 M.options = {
 	transparent_bg = false, -- boolean, toggles a transparent background
 	disable_cursorline = false, -- boolean, hides CursorLine highlight by matching it to bg

@@ -1,5 +1,39 @@
 local M = {}
 
+---@class ZitchdogPalette
+---@field purple string
+---@field green string
+---@field orange string
+---@field coral string
+---@field cyan string
+---@field red string
+---@field pink string
+---@field white string
+---@field gray string
+---@field ash string
+---@field black string
+---@field darkblack string
+---@field magenta string
+---@field yellow string
+---@field mauve string
+---@field blue string
+---@field charcoal string
+---@field slate string
+---@field graphite string
+---@field lilac string
+---@field amethyst string
+---@field aubergine string
+---@field ebony string
+---@field maroon string
+---@field pine string
+---@field indigo string
+---@field umber string
+---@field clay string
+---@field mulberry string
+---@field teal string
+---@field lightblack string
+
+---@type table<ZitchdogVariant, ZitchdogPalette>
 M.variants = {
 	dune = {
 		purple = "#a277ff",

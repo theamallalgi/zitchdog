@@ -1,5 +1,9 @@
 local M = {}
 
+---@param palette ZitchdogPalette
+---@param zitch_pattern ZitchdogHighlights
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function M.create(palette, zitch_pattern, config)
 	local bg = config.transparent_bg and "NONE" or palette.black
 	local darkBg = config.transparent_bg and "NONE" or palette.darkblack

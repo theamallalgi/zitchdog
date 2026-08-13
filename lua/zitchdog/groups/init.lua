@@ -2,6 +2,12 @@
 
 local M = {}
 
+---@param dir string
+---@param prefix string
+---@param palette ZitchdogPalette
+---@param zitch_pattern ZitchdogHighlights
+---@param config ZitchdogConfig
+---@param groups ZitchdogHighlights
 local function collect(dir, prefix, palette, zitch_pattern, config, groups)
 	for name, kind in vim.fs.dir(dir) do
 		if kind == "directory" then
@@ -17,6 +23,9 @@ local function collect(dir, prefix, palette, zitch_pattern, config, groups)
 	end
 end
 
+---@param palette ZitchdogPalette
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function M.setup(palette, config)
 	local groups = {}
 	local zitch_pattern = require("zitchdog.common.core").createZitchPattern(palette)

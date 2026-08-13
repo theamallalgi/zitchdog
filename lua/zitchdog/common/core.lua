@@ -1,8 +1,25 @@
 local core = {}
 
--- Maps a legacy comma separated `gui` string (e.g. "bold,italic") to
--- boolean attributes understood by nvim_set_hl, for groups that still
--- use the old `gui = "..."` convention.
+---@class ZitchdogHighlight
+---@field fg string?
+---@field bg string?
+---@field sp string?
+---@field gui string?
+---@field bold boolean?
+---@field italic boolean?
+---@field underline boolean?
+---@field undercurl boolean?
+---@field strikethrough boolean?
+---@field reverse boolean?
+---@field standout boolean?
+---@field nocombine boolean?
+---@field blend integer?
+---@alias ZitchdogHighlights table<string, ZitchdogHighlight>
+
+-- INFO: maps a legacy comma separated `gui` string (e.g. "bold,italic") to boolean attributes
+-- INFO: understood by nvim_set_hl, for groups that still use the old `gui = "..."` convention.
+---@param gui string?
+---@return ZitchdogHighlight
 local function guiToAttrs(gui)
 	if not gui then
 		return {}
@@ -17,13 +34,14 @@ local function guiToAttrs(gui)
 	}
 end
 
--- Applies a table of { GroupName = { fg, bg, sp, gui, bold, italic, ... } }
--- via nvim_set_hl instead of building "highlight ..." strings and running
--- them through vim.cmd(). This is faster (no string parsing on every
--- reload) and safe: color values coming from user config (config.colors,
--- config.fg, config.bg) are passed as plain Lua table values instead of
--- being concatenated into an Ex command string, so a stray "|" or ":" in
--- a user-supplied color can't be interpreted as a second command.
+-- INFO: applies a table of { GroupName = { fg, bg, sp, gui, bold, italic, ... } }
+-- INFO: via nvim_set_hl instead of building "highlight ..." strings and running
+-- INFO: them through vim.cmd(). This is faster (no string parsing on every
+-- INFO: reload) and safe: color values coming from user config (config.colors,
+-- INFO: config.fg, config.bg) are passed as plain Lua table values instead of
+-- INFO: being concatenated into an Ex command string, so a stray "|" or ":" in
+-- INFO: a user-supplied color can't be interpreted as a second command.
+---@param groups ZitchdogHighlights
 function core.applyHighlights(groups)
 	for group, styles in pairs(groups) do
 		local attrs = guiToAttrs(styles.gui)
@@ -45,6 +63,10 @@ function core.applyHighlights(groups)
 	end
 end
 
+---@param variant ZitchdogVariant
+---@param config ZitchdogConfig?
+---@return ZitchdogPalette palette
+---@return string variant_name
 function core.createPaletteByVariant(variant, config)
 	config = config or {}
 
@@ -53,9 +75,8 @@ function core.createPaletteByVariant(variant, config)
 
 	local variant_name = "zitchdog-" .. variant
 
-	-- Copy so overrides never mutate the shared variant table in
-	-- common/palette.lua (that table is reused every time the
-	-- colorscheme is (re)loaded).
+	-- INFO: copy so overrides never mutate the shared variant table in common/palette.lua
+	-- INFO: that table is reused every time the colorscheme is (re)loaded.
 	local palette = vim.tbl_extend("force", {}, base)
 
 	if config.fg then
@@ -71,6 +92,8 @@ function core.createPaletteByVariant(variant, config)
 	return palette, variant_name
 end
 
+---@param palette ZitchdogPalette
+---@return ZitchdogHighlights
 function core.createZitchPattern(palette)
 	return {
 		Foreground = { fg = palette.white },
@@ -114,15 +137,18 @@ function core.createZitchPattern(palette)
 	}
 end
 
+---@param palette ZitchdogPalette
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function core.createGroups(palette, config)
 	return require("zitchdog.groups").setup(palette, config)
 end
 
--- Forces lualine to pick up the latest zitchdog palette. lualine caches
--- its theme module the first time it's required, so a plain colorscheme
--- switch never touches it on its own; this evicts the cached module and
--- re-runs lualine's setup() so the statusline colors actually follow the
--- new variant/overrides. No-ops silently if lualine isn't installed.
+-- INFO: forces lualine to pick up the latest zitchdog palette. lualine caches
+-- INFO: its theme module the first time it's required, so a plain colorscheme
+-- INFO: switch never touches it on its own; this evicts the cached module and
+-- INFO: re-runs lualine's setup() so the statusline colors actually follow the
+-- INFO: new variant/overrides. No-ops silently if lualine isn't installed.
 function core.refreshLualine()
 	local ok_lualine, lualine = pcall(require, "lualine")
 	if not ok_lualine then
@@ -137,6 +163,8 @@ function core.refreshLualine()
 	end
 end
 
+---@param palette ZitchdogPalette
+---@param config ZitchdogConfig
 function core.createTheme(palette, config)
 	local color = require("zitchdog.common.color")
 
@@ -173,9 +201,9 @@ function core.createTheme(palette, config)
 
 	core.applyHighlights(groups)
 
-	-- Share the fully resolved palette (variant + fg/bg/colors overrides)
-	-- so companion modules such as the lualine theme can stay in sync
-	-- instead of re-deriving a stale, un-overridden palette on their own.
+	-- INFO: share the fully resolved palette (variant + fg/bg/colors overrides)
+	-- INFO: so companion modules such as the lualine theme can stay in sync
+	-- INFO: instead of re-deriving a stale, un-overridden palette on their own.
 	require("zitchdog.state").set(palette, config)
 
 	core.refreshLualine()

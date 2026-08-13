@@ -2,6 +2,10 @@ local M = {}
 
 M.url = "https://github.com/folke/noice.nvim"
 
+---@param palette ZitchdogPalette
+---@param zitch_pattern ZitchdogHighlights
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		NoiceCmdlinePopupBorder = { fg = palette.green, bg = "NONE" },

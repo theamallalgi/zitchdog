@@ -1,2 +1,2 @@
 -- colors/zitchdog-grape.lua
-require("zitchdog").load({ variant = "grape", })
+require("zitchdog").load({ variant = "grape" })

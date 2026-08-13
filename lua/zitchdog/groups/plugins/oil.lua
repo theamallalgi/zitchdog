@@ -2,6 +2,10 @@ local M = {}
 
 M.url = "https://github.com/stevearc/oil.nvim"
 
+---@param palette ZitchdogPalette
+---@param zitch_pattern ZitchdogHighlights
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		OilDir = { fg = palette.yellow, bg = palette.umber, bold = true },

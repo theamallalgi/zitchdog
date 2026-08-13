@@ -2,11 +2,13 @@ local config = require("zitchdog.config").options
 
 local M = {}
 
+---@param opts ZitchdogConfig?
 function M.setup(opts)
 	opts = opts or {}
 	config = vim.tbl_deep_extend("force", config, opts)
 end
 
+---@param opts ZitchdogConfig?
 function M.load(opts)
 	if opts then
 		M.setup(opts)

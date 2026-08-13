@@ -2,6 +2,10 @@ local M = {}
 
 M.url = "https://github.com/rcarriga/nvim-notify"
 
+---@param palette ZitchdogPalette
+---@param zitch_pattern ZitchdogHighlights
+---@param config ZitchdogConfig
+---@return ZitchdogHighlights
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		NotifyINFOBody = { fg = palette.blue, bg = "NONE" },
