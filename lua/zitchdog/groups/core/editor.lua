@@ -62,6 +62,7 @@ function M.create(palette, zitch_pattern, config)
 		FloatBorder = { fg = palette.magenta },
 		FloatTitle = { fg = palette.purple, bg = palette.amethyst },
 		Float = { fg = palette.magenta },
+    MsgArea = { fg = palette.yellow },
 
 		-- statuscolumn
 		StatusLine = { fg = palette.white, bg = palette.darkblack, bold = true },
