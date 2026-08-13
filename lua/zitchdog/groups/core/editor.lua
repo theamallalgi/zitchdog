@@ -4,7 +4,7 @@ function M.create(palette, zitch_pattern, config)
 	local bg = config.transparent_bg and "NONE" or palette.black
 	local darkBg = config.transparent_bg and "NONE" or palette.darkblack
 	local groups = {
-		CursorLine = { fg = palette.lightblack },
+		CursorLine = { bg = palette.lightblack },
 		-- CursorLine = { bg = config.transparent_bg and "NONE" or palette.charcoal },
 		Cursor = { bg = palette.magenta },
 		lCursor = { bg = palette.magenta },
