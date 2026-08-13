@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/nvim-telescope/telescope.nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		TelescopePromptBorder = { fg = palette.magenta },

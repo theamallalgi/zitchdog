@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/stevearc/oil.nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		OilDir = { fg = palette.yellow, bg = palette.umber, bold = true },

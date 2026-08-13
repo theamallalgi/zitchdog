@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/lewis6991/gitsigns.nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		-- gitsigns.nvim: see https://github.com/lewis6991/gitsigns.nvim

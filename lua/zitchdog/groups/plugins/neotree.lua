@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		NeoTreeDirectoryIcon = { bg = "NONE", fg = palette.yellow },

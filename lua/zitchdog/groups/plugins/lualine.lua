@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/nvim-lualine/lualine.nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		lualine_a_normal = { fg = palette.blue, bg = palette.lightblack },

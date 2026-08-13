@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/goolord/alpha-nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		AlphaHeader = { fg = palette.purple, bg = "NONE" },

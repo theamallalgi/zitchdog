@@ -1,5 +1,7 @@
 local M = {}
 
+M.url = "https://github.com/folke/noice.nvim"
+
 function M.create(palette, zitch_pattern, config)
 	local groups = {
 		NoiceCmdlinePopupBorder = { fg = palette.green, bg = "NONE" },
