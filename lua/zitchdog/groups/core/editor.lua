@@ -4,9 +4,13 @@ function M.create(palette, zitch_pattern, config)
 	local bg = config.transparent_bg and "NONE" or palette.black
 	local darkBg = config.transparent_bg and "NONE" or palette.darkblack
 	local groups = {
-		CursorLine = { bg = palette.lightblack },
-		-- CursorLine = { bg = config.transparent_bg and "NONE" or palette.charcoal },
-		Cursor = { bg = palette.magenta },
+		CursorLine = {
+			bg = config.disable_cursorline and (config.transparent_bg and "NONE" or palette.black)
+				or palette.lightblack,
+		},
+		-- CursorLine = { bg = palette.lightblack }, -- default
+		-- CursorLine = { bg = config.transparent_bg and "NONE" or palette.charcoal }, -- when hidden
+		Cursor = { bg = palette.orange },
 		lCursor = { bg = palette.magenta },
 		CursorIM = { bg = palette.magenta },
 		Directory = zitch_pattern.GreenBold,
@@ -33,10 +37,6 @@ function M.create(palette, zitch_pattern, config)
 		PmenuThumb = { bg = palette.amethyst },
 		Search = { fg = palette.umber, bg = palette.yellow },
 		SpecialKey = zitch_pattern.Foreground,
-		-- SpellBad = zitch_pattern.RedUnderline,
-		-- SpellCap = zitch_pattern.OrangeUnderline,
-		-- SpellLocal = zitch_pattern.BlueUnderline,
-		-- SpellRare = zitch_pattern.PurpleUnderline,
 		SpellBad = { undercurl = true, sp = palette.red },
 		SpellCap = { undercurl = true, sp = palette.orange },
 		SpellRare = { undercurl = true, sp = palette.purple },
