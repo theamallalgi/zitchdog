@@ -1,19 +1,19 @@
 ![HEADER IMAGE](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/header.jpg?raw=true)
 
 # Zitchdog 🦑
-A minimal purple based soothing colorscheme (for neovim and much more!) inspired by [The Aura Theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants for much more fun!
+A minimal purple-based soothing colorscheme (for neovim and much more!) inspired by [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants for much more fun!
 
 ## Theme Variants
 
 <details open>
-	<summary>🍇 Variant: Grape</summary>
+	<summary>Variant: <b>Grape</b></summary>
 </br>
 
 ![Grape Variant](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-1.png?raw=true)
 </details>
 
 <details open>
-	<summary>🌲 Variant: Pine</summary>
+	<summary>Variant: <b>Pine</b></summary>
 	</br>
 
 ![Pine Variant](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-1.png?raw=true)
@@ -21,13 +21,13 @@ A minimal purple based soothing colorscheme (for neovim and much more!) inspired
 
 ## Features
 
-- Multiple Theme Variants.
+- Multiple theme variants.
 - Supports tons of major plugins.
-- Provides [Extra Configs](https://github.com/theamallalgi/zitchdog/tree/main/extras) for numerous other applications.
-- Does NOT have a light mode (Yes it's a feature!)
+- Provides [support](https://github.com/theamallalgi/zitchdog/tree/main/extras) for numerous other applications.
+- Does not have an accursed light mode.
 
 <details>
-<summary>List of Supported Plugins</summary>
+<summary>List of supported plugins</summary>
 </br>
 
 <!-- plugins:start -->
@@ -106,7 +106,7 @@ A minimal purple based soothing colorscheme (for neovim and much more!) inspired
 </details>
 
 <details>
-<summary>List of Extra Applications</summary>
+<summary>List of extra applications</summary>
 </br>
 
 <!-- extras:start -->
@@ -138,12 +138,19 @@ A minimal purple based soothing colorscheme (for neovim and much more!) inspired
 
 ## Requirements
 - Neovim: Version >= 0.8.0
-- Patched Nerd Font(s) for Glyph Support (for extras)
-- Neovim Plugin Manager
+- Patched Nerd Font(s) for glyph support (for extras)
 
 ## Installation
 
-Using Lazy Plugin Manager
+Using `vim.pack`
+```lua
+-- vim.pack (Neovim 0.12+)
+vim.pack.add({
+  { src = "https://github.com/theamallalgi/zitchdog" },
+})
+```
+
+Using [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 ```lua
 {
   "theamallalgi/zitchdog",
@@ -151,20 +158,30 @@ Using Lazy Plugin Manager
   priority = 1000,
 }
 ```
-Using Packer
+Using [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```vim
-use "theamallalgi/zitchdog.nvim"
+use "theamallalgi/zitchdog"
 ```
 
-Using vim-plug
+Using [junegunn/vim-plug](https://github.com/junegunn/vim-plug)
 ```vim
-Plug "theamallalgi/zitchdog.nvim"
+Plug "theamallalgi/zitchdog"
 ```
 
 ## Usage
-currently there are 2 available variants - `zitchdog-grape`, `zitchdog-pine`
+Currently there are 2 available variants - `zitchdog-grape`, `zitchdog-pine`
 
-- Set the Colorscheme in your init.lua file or a specific plugin file etc.
+`require("zitchdog")` loads `lua/zitchdog/init.lua`, the module's entrypoint. It exposes two functions:
+
+* `setup(opts)` merges your table into the config defaults using `vim.tbl_deep_extend("force", ...)`. It only updates config in memory, it does not touch the editor.
+* `load(opts)` is what actually applies the colorscheme. If `opts` is passed, it calls `setup(opts)` internally first, then builds the palette for the configured variant and sets every highlight group.
+
+So `load({ variant = "pine" })` is really `setup({ variant = "pine" })` followed by `load()`. Calling `load()` alone just applies whatever is currently sitting in config, either the hardcoded defaults or whatever a prior setup() left behind.
+
+> [!NOTE]
+> If you're loading zitchdog via `colorscheme zitchdog-<variant>` instead of calling `load()` directly, call `setup()` with your config before that command runs. The `colors/` files just call `load()` with a hardcoded variant and nothing else, so anything you want applied has to already be in config by then.
+
+Set the Colorscheme in your `init.lua` file or a specific plugin file etc.
 
 ```lua
 -- To load the default theme (grape)
@@ -174,15 +191,17 @@ require("zitchdog").load()
 require("zitchdog").load({ variant = "pine" })
 ```
 
-- Further Configuration
+### Further Configuration
 
 ```lua
 -- Default configuration
 require("zitchdog").setup({
-  transparent_bg = false, -- a boolean to toggle transparent background
-  variant = "grape", -- the default colorscheme
-  italic_comments = false, -- a boolean to toggle italic comments
-  colors = {}, -- a table of colors to override the default palette
+  transparent_bg = false, -- boolean: toggles a transparent background
+	variant = "grape", -- "grape" | "pine": the default colorscheme variant
+  italic_comments = false, -- boolean: toggles italic comments
+  fg = nil, -- string?: override the base foreground (defaults to the variant's white)
+  bg = nil, -- string?: override the base background (defaults to the variant's black; ignored when transparent_bg = true)
+  colors = {}, -- table<string, string>: override any specific palette color, e.g. { red = "#ff0000", purple = "#a277ff" }
 })
 
 -- To change the theme, you can use the `variant` option:
@@ -197,7 +216,7 @@ require("zitchdog").load({ variant = "pine" })
 ## Gallery
 
 <details open>
-	<summary>Some Screengrabs of the Grape Variant</summary>
+	<summary>Some screenshots of the `Grape` variant</summary>
 	</br>
 
 ![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-2.png?raw=true)
@@ -206,7 +225,7 @@ require("zitchdog").load({ variant = "pine" })
 </details>
 
 <details open>
-	<summary>Shots of the Pine Variant</summary>
+	<summary>Shots of the `Pine` variant</summary>
 	</br>
 
 ![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-2.png?raw=true)
