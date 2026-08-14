@@ -196,8 +196,9 @@ require("zitchdog").load({ variant = "pine" })
 ```lua
 -- Default configuration
 require("zitchdog").setup({
-  transparent_bg = false, -- boolean: toggles a transparent background
 	variant = "grape", -- "grape" | "pine": the default colorscheme variant
+  transparent_bg = false, -- boolean: toggles a transparent background
+	disable_cursorline = false, -- boolean: hides CursorLine highlight by matching it to bg
   italic_comments = false, -- boolean: toggles italic comments
   fg = nil, -- string?: override the base foreground (defaults to the variant's white)
   bg = nil, -- string?: override the base background (defaults to the variant's black; ignored when transparent_bg = true)
