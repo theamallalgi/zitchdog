@@ -27,40 +27,65 @@ local p = get_palette()
 
 M.normal = {
 	a = { fg = p.purple, bg = p.lightblack },
-	b = { fg = p.slate, bg = p.darkblack },
+	b = { fg = p.cyan, bg = p.teal },
 	c = { fg = p.slate, bg = p.darkblack },
 	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.red },
-	z = { fg = p.green, bg = p.pine },
+	y = { fg = p.slate, bg = p.darkblack },
+	z = { fg = p.slate, bg = p.darkblack },
 }
+
 M.insert = {
 	a = { fg = p.green, bg = p.pine },
-	b = { fg = p.red, bg = p.maroon },
-	z = { fg = p.green, bg = p.pine },
+	b = { fg = p.cyan, bg = p.teal },
+	c = { fg = p.slate, bg = p.darkblack },
+	x = { fg = p.slate, bg = p.darkblack },
 	y = { fg = p.slate, bg = p.darkblack },
+	z = { fg = p.slate, bg = p.darkblack },
 }
+
 M.visual = {
 	a = { fg = p.yellow, bg = p.umber },
-	b = { fg = p.red, bg = p.maroon },
-	z = { fg = p.yellow, bg = p.umber },
+	b = { fg = p.cyan, bg = p.teal },
+	c = { fg = p.slate, bg = p.darkblack },
+	x = { fg = p.slate, bg = p.darkblack },
 	y = { fg = p.slate, bg = p.darkblack },
+	z = { fg = p.slate, bg = p.darkblack },
 }
+
+M.command = {
+	a = { fg = p.coral, bg = p.maroon },
+	b = { fg = p.cyan, bg = p.teal },
+	c = { fg = p.slate, bg = p.darkblack },
+	x = { fg = p.slate, bg = p.darkblack },
+	y = { fg = p.slate, bg = p.darkblack },
+	z = { fg = p.slate, bg = p.darkblack },
+}
+
 M.replace = {
 	a = { fg = p.red, bg = p.maroon },
-	b = { fg = p.red, bg = p.maroon },
-	z = { fg = p.red, bg = p.maroon },
+	b = { fg = p.cyan, bg = p.teal },
+	c = { fg = p.slate, bg = p.darkblack },
+	x = { fg = p.slate, bg = p.darkblack },
 	y = { fg = p.slate, bg = p.darkblack },
+	z = { fg = p.slate, bg = p.darkblack },
 }
-M.command = {
-	a = { fg = p.coral, bg = p.clay },
-	b = { fg = p.red, bg = p.maroon },
-	z = { fg = p.coral, bg = p.clay },
+
+M.terminal = {
+	a = { fg = p.green, bg = p.pine },
+	b = { fg = p.cyan, bg = p.teal },
+	c = { fg = p.slate, bg = p.darkblack },
+	x = { fg = p.slate, bg = p.darkblack },
 	y = { fg = p.slate, bg = p.darkblack },
+	z = { fg = p.slate, bg = p.darkblack },
 }
+
 M.inactive = {
-	a = { fg = p.graphite, bg = p.magenta },
-	b = { fg = p.graphite, bg = p.magenta },
-	c = { fg = p.graphite },
+	a = { fg = p.graphite, bg = p.darkblack },
+	b = { fg = p.graphite, bg = p.darkblack },
+	c = { fg = p.graphite, bg = p.darkblack },
+	x = { fg = p.graphite, bg = p.darkblack },
+	y = { fg = p.graphite, bg = p.darkblack },
+	z = { fg = p.graphite, bg = p.darkblack },
 }
 
 return M
