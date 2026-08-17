@@ -69,7 +69,7 @@ function M.create(palette, zitch_pattern, config)
 		MsgArea = { fg = palette.yellow },
 
 		-- statuscolumn
-		StatusLine = { fg = palette.white, bg = palette.darkblack, bold = true },
+		StatusLine = { fg = palette.slate, bg = palette.darkblack, bold = false },
 		StatusLineNC = { fg = palette.slate, bg = palette.darkblack },
 		StatusLineTerm = { fg = palette.green, bg = palette.pine, bold = true },
 		StatusLineTermNC = { fg = palette.slate, bg = palette.darkblack },
