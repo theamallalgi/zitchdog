@@ -120,6 +120,16 @@ function M.create(palette, zitch_pattern, config)
 		netrwGray = { bg = "NONE", fg = palette.gray },
 		netrwList = { bg = "NONE", fg = palette.white },
 		netrwVersion = { bg = "NONE", fg = palette.magenta, italic = true },
+
+    -- quickfix list
+    QuickFixLine = { fg = palette.green, bg = palette.pine },
+    qfFileName = { fg = palette.slate },
+    qfLineNr = { fg = palette.yellow },
+    qfSeparator1 = { fg = palette.amethyst },
+    qfSeparator2 = { fg = palette.amethyst },
+    qfText = { fg = palette.purple },
+    qfError = { fg = palette.red, bg = palette.maroon, bold = true },
+
 	}
 	return groups
 end
