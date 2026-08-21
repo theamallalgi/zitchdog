@@ -15,7 +15,7 @@ function M.create(palette, zitch_pattern, config)
 		NoiceFormatProgressDone = { fg = palette.clay, bg = palette.yellow, bold = true },
 		NoiceFormatProgressTodo = { fg = palette.yellow, bg = palette.clay, bold = true },
 		-- cmdline
-		NoiceCmdline = { fg = palette.purple },
+		NoiceCmdline = { fg = palette.yellow, bold = true },
 		NoiceCmdlinePopupBorderCmdline = { fg = palette.purple },
 		NoiceCmdlinePopupBorder = { fg = palette.slate },
 		NoiceCmdlinePopupTitle = { fg = palette.green },
