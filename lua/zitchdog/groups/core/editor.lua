@@ -55,9 +55,6 @@ function M.create(palette, zitch_pattern, config)
 		ColorColumn = { bg = palette.mauve },
 		WildMenu = { fg = palette.purple, bg = palette.graphite },
 		Visual = { bg = palette.graphite },
-		Question = { fg = palette.purple },
-		ModeMsg = { fg = palette.white, gui = "bold" },
-		MoreMsg = { fg = palette.white, gui = "bold" },
 		WinSeparator = { fg = palette.amethyst },
 		Whitespace = { fg = palette.gray },
 		NonText = { fg = palette.gray },
@@ -129,6 +126,14 @@ function M.create(palette, zitch_pattern, config)
 		qfSeparator2 = { fg = palette.amethyst },
 		qfText = { fg = palette.purple },
 		qfError = { fg = palette.red, bg = palette.maroon, bold = true },
+
+		-- ui2 stuff
+		ModeMsg = { fg = palette.purple },
+		MoreMsg = { fg = palette.orange, bg = palette.umber },
+		Question = { fg = palette.orange, bold = true },
+		OkMsg = { fg = palette.green },
+		StdoutMsg = { fg = palette.blue },
+		StderrMsg = { fg = palette.red, bg = palette.maroon },
 	}
 	return groups
 end
