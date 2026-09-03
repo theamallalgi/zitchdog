@@ -28,7 +28,7 @@ function M.create(palette, zitch_pattern, config)
 		Folded = { fg = palette.gray, gui = "italic" },
 		FoldColumn = { fg = palette.gray, bg = bg },
 		SignColumn = { bg = bg },
-		IncSearch = { fg = palette.umber, bg = palette.red },
+		IncSearch = { fg = palette.maroon, bg = palette.red },
 		Substitute = { fg = "#c0c9c3", bg = "#051177", bold = true },
 		LineNr = zitch_pattern.PurpleFaded,
 		CursorLineNr = { bg = config.transparent_bg and "NONE" or palette.charcoal, fg = palette.lilac },
