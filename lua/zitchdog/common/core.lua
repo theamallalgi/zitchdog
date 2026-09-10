@@ -156,6 +156,9 @@ function core.refreshLualine()
 	end
 
 	package.loaded["lualine.themes.zitchdog"] = nil
+	package.loaded["lualine.themes.zitchdog-grape"] = nil
+	package.loaded["lualine.themes.zitchdog-pine"] = nil
+	-- package.loaded["lualine.themes.zitchdog-dune"] = nil
 
 	local ok_config, cfg = pcall(lualine.get_config)
 	if ok_config then
