@@ -8,6 +8,7 @@ M.url = "https://github.com/lukas-reineke/indent-blankline.nvim"
 ---@return ZitchdogHighlights
 function M.create(palette, zitch_pattern, config)
 	local groups = {
+		IndentBlanklineChar = { fg = palette.mulberry, bg = "NONE", italic = false },
 		IblIndent = { fg = palette.mulberry, bg = "NONE", italic = false },
 		IblScope = { fg = palette.lilac, bg = "NONE", italic = false },
 		IblWhitespace = { fg = palette.mulberry, bg = "NONE", italic = false },
