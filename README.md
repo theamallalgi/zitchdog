@@ -214,6 +214,26 @@ require("zitchdog").setup({
 require("zitchdog").load({ variant = "pine" })
 ```
 
+Some plugins need extra configuration to work with **zitchdog**.
+
+<details open>
+	<summary>Click here for more information</summary>
+	
+#### 1. Get proper colors in [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+
+```lua
+-- your lualine config file?
+require('lualine').setup {
+  options = {
+    -- rest of your lualine config
+    theme = 'zitchdog',
+    -- rest of your lualine config
+  }
+}
+```
+	
+</details>
+
 ## Gallery
 
 <details open>
