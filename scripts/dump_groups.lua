@@ -30,7 +30,10 @@ return function(variant, outpath)
 	end
 
 	local f = io.open(outpath, "w")
+---@diagnostic disable-next-line: need-check-nil
 	f:write(table.concat(lines, "\n"))
+---@diagnostic disable-next-line: need-check-nil
 	f:write("\n")
+---@diagnostic disable-next-line: need-check-nil
 	f:close()
 end
