@@ -15,6 +15,7 @@ function M.create(palette, zitch_pattern, config)
 		-- CursorLine = { bg = palette.lightblack }, -- default
 		-- CursorLine = { bg = config.transparent_bg and "NONE" or palette.charcoal }, -- when hidden
 		Cursor = { bg = palette.orange },
+		iCursor = { bg = "#F6CEFF" },
 		lCursor = { bg = palette.magenta },
 		CursorIM = { bg = palette.magenta },
 		Directory = zitch_pattern.GreenBold,
