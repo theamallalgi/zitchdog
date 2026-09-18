@@ -52,6 +52,37 @@ function M.create(palette, zitch_pattern, config)
 		Italic = { gui = "italic" },
 		Error = { fg = palette.red, gui = "bold,underline" },
 		Todo = { fg = palette.green, gui = "bold,italic" },
+
+		-- markup languages
+		-- headings
+		["@markup.heading.1.markdown"] = { fg = palette.purple, bold = true },
+		["@markup.heading.2.markdown"] = { fg = palette.blue, bold = true },
+		["@markup.heading.3.markdown"] = { fg = palette.yellow, bold = true },
+		["@markup.heading.4.markdown"] = { fg = palette.red, bold = true },
+		["@markup.heading.5.markdown"] = { fg = palette.green, bold = true },
+		["@markup.heading.6.markdown"] = { fg = palette.cyan, bold = true },
+		-- text emphasis
+		["@markup.strong"] = { fg = palette.white, bold = true },
+		["@markup.italic"] = { fg = palette.white, italic = true },
+		["@markup.strikethrough"] = { fg = palette.white, strikethrough = true },
+		["@markup.underline"] = { fg = palette.white, underline = true },
+		-- code
+		["@markup.raw"] = { fg = palette.orange },
+		["@markup.raw.block"] = { bg = palette.aubergine },
+		["@markup.raw.delimiter"] = { fg = palette.orange },
+		["@markup.raw.markdown_inline"] = { fg = palette.orange, bg = palette.umber },
+		["@label.markdown"] = { fg = palette.blue, bg = palette.indigo },
+		-- links
+		["@markup.link"] = { fg = palette.blue },
+		["@markup.link.label"] = { fg = palette.cyan, bold = true },
+		["@markup.link.url"] = { fg = palette.blue, underline = true },
+		-- lists and quotes
+		["@markup.list"] = { fg = palette.purple },
+		["@markup.list.checked"] = { fg = palette.green, bold = true },
+		["@markup.list.unchecked"] = { fg = palette.green },
+		["@markup.quote"] = { fg = palette.gray },
+		-- misc
+		["@punctuation.special.markdown"] = { fg = palette.gray },
 	}
 	return groups
 end
