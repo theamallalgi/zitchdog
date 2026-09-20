@@ -3,7 +3,7 @@
 set -euo pipefail
 
 BASE_BRANCH="${1:-main}"
-VARIANTS=("dune" "grape" "pine")
+VARIANTS=("grape" "pine")
 WORKTREE_DIR="../zitchdog-verify"
 TMP_DIR=$(mktemp -d)
 

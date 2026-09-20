@@ -14,9 +14,7 @@ local function get_palette()
 
 	-- Fallback if this loads before zitchdog has set a colorscheme.
 	local current_colorscheme = vim.g.colors_name
-	if current_colorscheme == "zitchdog-dune" then
-		return palettes.dune
-	elseif current_colorscheme == "zitchdog-pine" then
+	if current_colorscheme == "zitchdog-pine" then
 		return palettes.pine
 	else
 		return palettes.grape -- matches config.lua's default variant

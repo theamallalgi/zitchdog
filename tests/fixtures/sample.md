@@ -14,7 +14,6 @@ A colorscheme built for **clarity** and *contrast*.
 | Variant | Style     | Default |
 |---------|-----------|---------|
 | grape   | Purple    | Yes     |
-| dune    | Warm      | No      |
 | pine    | Cool      | No      |
 
 > Highlight groups are split into `core/` and `plugins/`.
@@ -30,7 +29,6 @@ Visit the [repo](https://github.com/example/zitchdog) for more.
 name: zitchdog
 version: 1.0.0
 variants:
-  - dune
   - grape
   - pine
 config:

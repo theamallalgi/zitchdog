@@ -3,7 +3,6 @@ local M = {}
 ---@alias ZitchdogVariant
 ---| "grape"
 ---| "pine"
----| "dune"
 
 ---@class ZitchdogConfig
 ---@field variant "grape"|"pine" the default colorscheme variant

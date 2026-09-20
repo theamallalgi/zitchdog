@@ -1,7 +1,6 @@
 name: zitchdog
 version: 1.0.0
 variants:
-  - dune
   - grape
   - pine
 config:
