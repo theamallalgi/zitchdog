@@ -149,21 +149,21 @@ end
 -- INFO: switch never touches it on its own; this evicts the cached module and
 -- INFO: re-runs lualine's setup() so the statusline colors actually follow the
 -- INFO: new variant/overrides. No-ops silently if lualine isn't installed.
-function core.refreshLualine()
-	local ok_lualine, lualine = pcall(require, "lualine")
-	if not ok_lualine then
-		return
-	end
-
-	package.loaded["lualine.themes.zitchdog"] = nil
-	package.loaded["lualine.themes.zitchdog-grape"] = nil
-	package.loaded["lualine.themes.zitchdog-pine"] = nil
-
-	local ok_config, cfg = pcall(lualine.get_config)
-	if ok_config then
-		lualine.setup(cfg)
-	end
-end
+-- function core.refreshLualine()
+-- 	local ok_lualine, lualine = pcall(require, "lualine")
+-- 	if not ok_lualine then
+-- 		return
+-- 	end
+--
+-- 	package.loaded["lualine.themes.zitchdog"] = nil
+-- 	package.loaded["lualine.themes.zitchdog-grape"] = nil
+-- 	package.loaded["lualine.themes.zitchdog-pine"] = nil
+--
+-- 	local ok_config, cfg = pcall(lualine.get_config)
+-- 	if ok_config then
+-- 		lualine.setup(cfg)
+-- 	end
+-- end
 
 ---@param palette ZitchdogPalette
 ---@param config ZitchdogConfig
@@ -208,7 +208,7 @@ function core.createTheme(palette, config)
 	-- INFO: instead of re-deriving a stale, un-overridden palette on their own.
 	require("zitchdog.state").set(palette, config)
 
-	core.refreshLualine()
+	-- core.refreshLualine()
 end
 
 return core

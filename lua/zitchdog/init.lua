@@ -22,6 +22,8 @@ function M.load(opts)
 	vim.g.colors_name = "zitchdog-" .. config.variant
 
 	core.createTheme(palette, config)
+
+	vim.api.nvim_exec_autocmds("ColorScheme", { pattern = vim.g.colors_name })
 end
 
 return M
