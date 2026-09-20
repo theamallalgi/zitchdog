@@ -31,8 +31,8 @@ function M.create(palette, zitch_pattern, config)
 		SnacksNotifierFooterTrace = { fg = palette.purple },
 		-- snacks picker
 		SnacksPicker = { bg = palette.black, fg = palette.purple },
-		SnacksPickerSelected = { fg = palette.cyan },
-		SnacksPickerUnselected = { fg = palette.teal },
+		SnacksPickerSelected = { fg = palette.purple },
+		SnacksPickerUnselected = { fg = palette.amethyst },
 		SnacksPickerMatch = { bg = palette.pine, fg = palette.green },
 		SnacksPickerDir = { fg = palette.purple },
 		SnacksPickerFile = { fg = palette.magenta, bg = palette.aubergine, bold = true },
