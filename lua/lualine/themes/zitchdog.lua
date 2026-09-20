@@ -21,69 +21,78 @@ local function get_palette()
 	end
 end
 
-local p = get_palette()
+---@param p ZitchdogPalette
+---@return table
+local function build(p)
+	return {
+		normal = {
+			a = { fg = p.purple, bg = p.lightblack },
+			b = { fg = p.cyan, bg = p.teal },
+			c = { fg = p.slate, bg = p.darkblack },
+			x = { fg = p.slate, bg = p.darkblack },
+			y = { fg = p.slate, bg = p.darkblack },
+			z = { fg = p.slate, bg = p.darkblack },
+		},
+		insert = {
+			a = { fg = p.green, bg = p.pine },
+			b = { fg = p.cyan, bg = p.teal },
+			c = { fg = p.slate, bg = p.darkblack },
+			x = { fg = p.slate, bg = p.darkblack },
+			y = { fg = p.slate, bg = p.darkblack },
+			z = { fg = p.slate, bg = p.darkblack },
+		},
+		visual = {
+			a = { fg = p.yellow, bg = p.umber },
+			b = { fg = p.cyan, bg = p.teal },
+			c = { fg = p.slate, bg = p.darkblack },
+			x = { fg = p.slate, bg = p.darkblack },
+			y = { fg = p.slate, bg = p.darkblack },
+			z = { fg = p.slate, bg = p.darkblack },
+		},
+		command = {
+			a = { fg = p.coral, bg = p.maroon },
+			b = { fg = p.cyan, bg = p.teal },
+			c = { fg = p.slate, bg = p.darkblack },
+			x = { fg = p.slate, bg = p.darkblack },
+			y = { fg = p.slate, bg = p.darkblack },
+			z = { fg = p.slate, bg = p.darkblack },
+		},
+		replace = {
+			a = { fg = p.red, bg = p.maroon },
+			b = { fg = p.cyan, bg = p.teal },
+			c = { fg = p.slate, bg = p.darkblack },
+			x = { fg = p.slate, bg = p.darkblack },
+			y = { fg = p.slate, bg = p.darkblack },
+			z = { fg = p.slate, bg = p.darkblack },
+		},
+		terminal = {
+			a = { fg = p.green, bg = p.pine },
+			b = { fg = p.cyan, bg = p.teal },
+			c = { fg = p.slate, bg = p.darkblack },
+			x = { fg = p.slate, bg = p.darkblack },
+			y = { fg = p.slate, bg = p.darkblack },
+			z = { fg = p.slate, bg = p.darkblack },
+		},
+		inactive = {
+			a = { fg = p.graphite, bg = p.darkblack },
+			b = { fg = p.graphite, bg = p.darkblack },
+			c = { fg = p.graphite, bg = p.darkblack },
+			x = { fg = p.graphite, bg = p.darkblack },
+			y = { fg = p.graphite, bg = p.darkblack },
+			z = { fg = p.graphite, bg = p.darkblack },
+		},
+	}
+end
 
-M.normal = {
-	a = { fg = p.purple, bg = p.lightblack },
-	b = { fg = p.cyan, bg = p.teal },
-	c = { fg = p.slate, bg = p.darkblack },
-	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.slate, bg = p.darkblack },
-	z = { fg = p.slate, bg = p.darkblack },
-}
-
-M.insert = {
-	a = { fg = p.green, bg = p.pine },
-	b = { fg = p.cyan, bg = p.teal },
-	c = { fg = p.slate, bg = p.darkblack },
-	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.slate, bg = p.darkblack },
-	z = { fg = p.slate, bg = p.darkblack },
-}
-
-M.visual = {
-	a = { fg = p.yellow, bg = p.umber },
-	b = { fg = p.cyan, bg = p.teal },
-	c = { fg = p.slate, bg = p.darkblack },
-	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.slate, bg = p.darkblack },
-	z = { fg = p.slate, bg = p.darkblack },
-}
-
-M.command = {
-	a = { fg = p.coral, bg = p.maroon },
-	b = { fg = p.cyan, bg = p.teal },
-	c = { fg = p.slate, bg = p.darkblack },
-	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.slate, bg = p.darkblack },
-	z = { fg = p.slate, bg = p.darkblack },
-}
-
-M.replace = {
-	a = { fg = p.red, bg = p.maroon },
-	b = { fg = p.cyan, bg = p.teal },
-	c = { fg = p.slate, bg = p.darkblack },
-	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.slate, bg = p.darkblack },
-	z = { fg = p.slate, bg = p.darkblack },
-}
-
-M.terminal = {
-	a = { fg = p.green, bg = p.pine },
-	b = { fg = p.cyan, bg = p.teal },
-	c = { fg = p.slate, bg = p.darkblack },
-	x = { fg = p.slate, bg = p.darkblack },
-	y = { fg = p.slate, bg = p.darkblack },
-	z = { fg = p.slate, bg = p.darkblack },
-}
-
-M.inactive = {
-	a = { fg = p.graphite, bg = p.darkblack },
-	b = { fg = p.graphite, bg = p.darkblack },
-	c = { fg = p.graphite, bg = p.darkblack },
-	x = { fg = p.graphite, bg = p.darkblack },
-	y = { fg = p.graphite, bg = p.darkblack },
-	z = { fg = p.graphite, bg = p.darkblack },
-}
-
-return M
+-- Resolve on every access instead of once at require-time. lualine loads
+-- this module (or its zitchdog-grape/zitchdog-pine aliases, which just
+-- `require` this same module) through `require`, so it's cached the first
+-- time anything pulls it in — sometimes before zitchdog has even set a
+-- colorscheme. A metatable makes every M.normal/M.insert/etc. lookup
+-- rebuild from the current state instead of returning a value frozen at
+-- that first, possibly-premature load.
+return setmetatable(M, {
+	__index = function(_, key)
+		return build(get_palette())[key]
+	end,
+})
