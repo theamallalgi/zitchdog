@@ -32,11 +32,11 @@ function M.create(palette, zitch_pattern, config)
 		DiagnosticSignOk = { bg = "NONE", fg = palette.green },
 		DiagnosticVirtualTextOk = { bg = palette.pine, fg = palette.green },
 		-- underline indicators
-		DiagnosticUnderlineError = { underdotted = true, sp = palette.red },
-		DiagnosticUnderlineWarn = { underdotted = true, sp = palette.orange },
-		DiagnosticUnderlineHint = { underdotted = true, sp = palette.blue },
-		DiagnosticUnderlineInfo = { underdotted = true, sp = palette.cyan },
-		DiagnosticUnderlineOk = { underdotted = true, sp = palette.green },
+		DiagnosticUnderlineError = { undercurl = true, sp = palette.red },
+		DiagnosticUnderlineWarn = { undercurl = true, sp = palette.orange },
+		DiagnosticUnderlineHint = { undercurl = true, sp = palette.blue },
+		DiagnosticUnderlineInfo = { undercurl = true, sp = palette.cyan },
+		DiagnosticUnderlineOk = { undercurl = true, sp = palette.green },
 	}
 	return groups
 end
