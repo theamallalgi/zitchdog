@@ -135,6 +135,9 @@ function M.create(palette, zitch_pattern, config)
 		OkMsg = { fg = palette.green },
 		StdoutMsg = { fg = palette.blue },
 		StderrMsg = { fg = palette.red, bg = palette.maroon },
+
+		-- lsp
+		LspReferenceTarget = { bg = palette.pine },
 	}
 	return groups
 end
