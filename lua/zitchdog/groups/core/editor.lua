@@ -138,6 +138,9 @@ function M.create(palette, zitch_pattern, config)
 
 		-- lsp
 		LspReferenceTarget = { bg = palette.clay },
+		LspReferenceText = { bg = palette.pine },
+		LspReferenceRead = { bg = palette.pine },
+		LspReferenceWrite = { bg = palette.pine },
 	}
 	return groups
 end

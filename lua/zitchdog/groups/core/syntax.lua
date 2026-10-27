@@ -26,6 +26,7 @@ function M.create(palette, zitch_pattern, config)
 		Label = zitch_pattern.Purple,
 		Exception = zitch_pattern.Purple,
 		Operator = zitch_pattern.Purple,
+		["@operator"] = { fg = palette.orange },
 		Keyword = zitch_pattern.Purple,
 
 		Include = zitch_pattern.Purple,
@@ -52,6 +53,9 @@ function M.create(palette, zitch_pattern, config)
 		Italic = { gui = "italic" },
 		Error = { fg = palette.red, gui = "bold,underline" },
 		Todo = { fg = palette.green, gui = "bold,italic" },
+
+		["@lsp.type.formatSpecifier"] = { fg = palette.orange },
+		["@string.escape"] = { fg = palette.orange },
 
 		-- markup languages
 		-- headings
