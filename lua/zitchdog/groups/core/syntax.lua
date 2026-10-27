@@ -55,8 +55,6 @@ function M.create(palette, zitch_pattern, config)
 		Todo = { fg = palette.green, gui = "bold,italic" },
 
 		-- rust
-		["@lsp.type.macro"] = zitch_pattern.Foreground,
-		["@function.macro.bang"] = { fg = palette.orange },
 		["@lsp.type.formatSpecifier"] = { fg = palette.orange },
 		["@string.escape"] = { fg = palette.orange },
 
