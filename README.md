@@ -272,37 +272,37 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 | Name | Grape | Pine |
 | --- | --- | --- |
-| `purple` | `#8543e4` | `#844364` |
-| `green` | `#46cda8` | `#46914d` |
-| `orange` | `#e39069` | `#e47833` |
+| `purple` | `#8543e4` | `#9c467d` |
+| `green` | `#46cda8` | `#428c49` |
+| `orange` | `#e39069` | `#c96d06` |
 | `coral` | `#e4465d` | `#e4462f` |
 | `cyan` | `#17c5cb` | `#188e5c` |
-| `red` | `#e4384c` | `#e43728` |
+| `red` | `#e4384c` | `#ff4939` |
 | `pink` | `#d95be2` | `#da5b64` |
-| `white` | `#db94e3` | `#da7a64` |
-| `gray` | `#513b50` | `#513c2a` |
+| `white` | `#db94e3` | `#b996a8` |
+| `gray` | `#513b50` | `#3c2c46` |
 | `ash` | `#191324` | `#191219` |
-| `black` | `#0d0910` | `#0d0910` |
-| `darkblack` | `#0b080e` | `#030c0e` |
-| `magenta` | `#8443e4` | `#834264` |
-| `yellow` | `#e09066` | `#e37832` |
+| `black` | `#0d0910` | `#070508` |
+| `darkblack` | `#0b080e` | `#000000` |
+| `magenta` | `#8443e4` | `#9c2b66` |
+| `yellow` | `#e09066` | `#b07c12` |
 | `mauve` | `#281a42` | `#281b24` |
-| `blue` | `#64aae2` | `#658265` |
-| `charcoal` | `#0d0910` | `#0d0910` |
-| `slate` | `#542a91` | `#542a91` |
+| `blue` | `#64aae2` | `#69689b` |
+| `charcoal` | `#0d0910` | `#0a070b` |
+| `slate` | `#542a91` | `#633f52` |
 | `graphite` | `#272045` | `#272045` |
-| `lilac` | `#5a3c8d` | `#5a3b42` |
+| `lilac` | `#5a3c8d` | `#8e273e` |
 | `amethyst` | `#201638` | `#201520` |
-| `aubergine` | `#150f25` | `#151019` |
+| `aubergine` | `#150f25` | `#12080d` |
 | `ebony` | `#09080e` | `#0a090f` |
-| `maroon` | `#481219` | `#481214` |
+| `maroon` | `#481219` | `#3f0002` |
 | `pine` | `#0b1618` | `#0a1613` |
 | `indigo` | `#212f4a` | `#212e27` |
 | `umber` | `#331b17` | `#321c12` |
-| `clay` | `#331016` | `#331011` |
+| `clay` | `#331016` | `#462809` |
 | `mulberry` | `#2e1d46` | `#2d1e26` |
 | `teal` | `#08313f` | `#083122` |
-| `lightblack` | `#100d17` | `#100d17` |
+| `lightblack` | `#100d17` | `#150a16` |
 
 These are the base values. Overrides from `colors`, `fg` and `bg` in your config are applied on top of them.
 
