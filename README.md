@@ -226,12 +226,86 @@ Some plugins need extra configuration to work with **zitchdog**.
 require('lualine').setup {
   options = {
     -- rest of your lualine config
-    theme = 'zitchdog',
+    theme = 'auto', -- or 'zitchdog-grape/pine'
     -- rest of your lualine config
   }
 }
 ```
 	
+</details>
+
+### Palette API
+
+You can read the active variant's palette through `require("zitchdog.colors")` and use it to define your own highlight groups, for example to style third-party plugins like `bufferline.nvim` or `tabby.nvim`.
+
+```lua
+local palette = require("zitchdog.colors").setup()
+vim.api.nvim_set_hl(0, "CustomHighlight", { fg = palette.purple, bg = palette.amethyst })
+```
+
+* `setup(opts)` returns a copy of the palette of the currently active variant, including any `fg`, `bg` and `colors` overrides from your config. Editing the returned table does not affect the colorscheme.
+* `opts.variant` is optional and reads a specific variant regardless of the active one, e.g. `setup({ variant = "pine" })`.
+* `get(opts)` is an alias of `setup(opts)`.
+
+> [!NOTE]
+> The palette is a snapshot taken when you call it, and loading a colorscheme clears custom highlight groups. Define your groups inside a `ColorScheme` autocmd so they follow variant switches:
+
+```lua
+vim.api.nvim_create_autocmd("ColorScheme", {
+	pattern = "zitchdog-*",
+	callback = function()
+		local p = require("zitchdog.colors").setup()
+		vim.api.nvim_set_hl(0, "CustomHighlight", { fg = p.purple, bg = p.amethyst })
+	end,
+})
+```
+
+#### To see every available color and its value for the active variant, run:
+
+```vim
+:lua print(vim.inspect(require("zitchdog.colors").setup()))
+```
+
+<details>
+<summary>Available colors and hex codes</summary>
+</br>
+
+| Name | Grape | Pine |
+| --- | --- | --- |
+| `purple` | `#8543e4` | `#844364` |
+| `green` | `#46cda8` | `#46914d` |
+| `orange` | `#e39069` | `#e47833` |
+| `coral` | `#e4465d` | `#e4462f` |
+| `cyan` | `#17c5cb` | `#188e5c` |
+| `red` | `#e4384c` | `#e43728` |
+| `pink` | `#d95be2` | `#da5b64` |
+| `white` | `#db94e3` | `#da7a64` |
+| `gray` | `#513b50` | `#513c2a` |
+| `ash` | `#191324` | `#191219` |
+| `black` | `#0d0910` | `#0d0910` |
+| `darkblack` | `#0b080e` | `#030c0e` |
+| `magenta` | `#8443e4` | `#834264` |
+| `yellow` | `#e09066` | `#e37832` |
+| `mauve` | `#281a42` | `#281b24` |
+| `blue` | `#64aae2` | `#658265` |
+| `charcoal` | `#0d0910` | `#0d0910` |
+| `slate` | `#542a91` | `#542a91` |
+| `graphite` | `#272045` | `#272045` |
+| `lilac` | `#5a3c8d` | `#5a3b42` |
+| `amethyst` | `#201638` | `#201520` |
+| `aubergine` | `#150f25` | `#151019` |
+| `ebony` | `#09080e` | `#0a090f` |
+| `maroon` | `#481219` | `#481214` |
+| `pine` | `#0b1618` | `#0a1613` |
+| `indigo` | `#212f4a` | `#212e27` |
+| `umber` | `#331b17` | `#321c12` |
+| `clay` | `#331016` | `#331011` |
+| `mulberry` | `#2e1d46` | `#2d1e26` |
+| `teal` | `#08313f` | `#083122` |
+| `lightblack` | `#100d17` | `#100d17` |
+
+These are the base values. Overrides from `colors`, `fg` and `bg` in your config are applied on top of them.
+
 </details>
 
 ## Gallery
