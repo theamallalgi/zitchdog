@@ -19,9 +19,12 @@ function M.load(opts)
 
 	local core = require("zitchdog.common.core")
 	local palette = core.createPaletteByVariant(config.variant, config)
-	vim.g.colors_name = "zitchdog-" .. config.variant
 
 	core.createTheme(palette, config)
+
+	-- `hi clear` inside createTheme can unset g:colors_name, so set it afterwards.
+	-- lualine's `auto` theme and the ColorScheme autocmd below both read it.
+	vim.g.colors_name = "zitchdog-" .. config.variant
 
 	vim.api.nvim_exec_autocmds("ColorScheme", { pattern = vim.g.colors_name })
 end

@@ -1,2 +1,2 @@
 -- lua/lualine/themes/zitchdog-grape.lua
-return require("lualine.themes.zitchdog")
+return require("zitchdog.lualine").get("grape")
