@@ -1,7 +1,7 @@
-![HEADER IMAGE](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/header.jpg?raw=true)
+<img width="1400" height="784" alt="Header" src="https://github.com/user-attachments/assets/d556b82a-61a3-4669-a03f-a76dbb0fa24e" />
 
-# Zitchdog 🦑
-A minimal purple-based soothing colorscheme (for neovim and much more!) inspired by [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants for much more fun!
+# Zitchdog
+A minimal purple-based soothing colorscheme (for neovim and much more!) inspired by [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants!
 
 ## Theme Variants
 
@@ -9,14 +9,26 @@ A minimal purple-based soothing colorscheme (for neovim and much more!) inspired
 	<summary>Variant: <b>Grape</b></summary>
 </br>
 
-![Grape Variant](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-1.png?raw=true)
+<img width="1900" height="1030" alt="Grape Variant" src="https://github.com/user-attachments/assets/c36aee75-c809-414d-9c16-7c14e0a0fbac" />
+
 </details>
 
 <details open>
 	<summary>Variant: <b>Pine</b></summary>
 	</br>
 
-![Pine Variant](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-1.png?raw=true)
+<img width="1900" height="1030" alt="Pine Variant" src="https://github.com/user-attachments/assets/041a9134-0a49-468a-a048-ecac22391b9d" />
+
+</details>
+
+<details>
+	<summary>Some extra screenshots (see more below)</summary>
+	</br>
+
+<img width="1900" height="1030" alt="extra-a" src="https://github.com/user-attachments/assets/9ee14df8-e969-42a7-a6aa-517b920518b3" />
+<img width="1900" height="1030" alt="extra-b" src="https://github.com/user-attachments/assets/8dfdac30-2aa8-4139-87ed-05609d1cdfa9" />
+<img width="1900" height="1030" alt="extra-c" src="https://github.com/user-attachments/assets/adb5e4e1-2fdf-4bb1-ae3d-26be272861fe" />
+
 </details>
 
 ## Features
@@ -314,19 +326,23 @@ These are the base values. Overrides from `colors`, `fg` and `bg` in your config
 	<summary>Some screenshots of the `Grape` variant</summary>
 	</br>
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-2.png?raw=true)
+<img width="1900" height="1030" alt="err-grape" src="https://github.com/user-attachments/assets/e8296fd3-42fa-4928-a88d-d47d80b7beda" />
+<img width="1900" height="1030" alt="netrw-grape" src="https://github.com/user-attachments/assets/de68e3b8-b783-49df-bb27-1118f4e549be" />
+<img width="1900" height="1030" alt="sel-grape" src="https://github.com/user-attachments/assets/edc22cef-97fc-4477-9a17-fc1bc80458e2" />
+<img width="1900" height="1030" alt="tel-grape" src="https://github.com/user-attachments/assets/25e5c6a0-b54c-4424-a867-cff9031bd87f" />
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/grape-3.png?raw=true)
 </details>
 
 <details open>
-	<summary>Shots of the `Pine` variant</summary>
+	<summary>Some screenshots of the `Pine` variant</summary>
 	</br>
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-2.png?raw=true)
+<img width="1900" height="1030" alt="err-pine" src="https://github.com/user-attachments/assets/be3c4f0c-8d53-492f-8937-a908c77377ce" />
+<img width="1900" height="1030" alt="netrw-pine" src="https://github.com/user-attachments/assets/3787ae67-1337-44bc-a75e-62712bcaa878" />
+<img width="1900" height="1030" alt="sel-pine" src="https://github.com/user-attachments/assets/7ca8b02a-f9d3-4d31-9f0a-9e62af82af8a" />
+<img width="1900" height="1030" alt="tel-pine" src="https://github.com/user-attachments/assets/e4b47deb-717c-4b9d-9fe3-7a99c9d88e0d" />
 
-![Code](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/pine-3.png?raw=true)
 </details>
 
 > [!NOTE]
-> More cool stuff is on the way, see ya soon!
+> 🦑  more cool stuff is on the way, see ya soon!
