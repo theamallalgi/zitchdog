@@ -230,7 +230,7 @@ Some plugins need extra configuration to work with **zitchdog**.
 
 <details open>
 	<summary>Click here for more information</summary>
-	
+
 #### 1. Get proper colors in [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
@@ -243,7 +243,7 @@ require('lualine').setup {
   }
 }
 ```
-	
+
 </details>
 
 ### Palette API
@@ -271,6 +271,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	end,
 })
 ```
+
+![Palette](https://github.com/theamallalgi/zitchdog/blob/main/docs/assets/palette.svg?raw=true)
 
 #### To see every available color and its value for the active variant, run:
 
