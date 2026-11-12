@@ -24,9 +24,9 @@ function M.create(palette, zitch_pattern, config)
 
 		-- blink.cmp
 		BlinkCmpMenu = { fg = palette.magenta, bg = bg },
-		BlinkCmpMenuBorder = { bg = bg, fg = palette.magenta },
-		BlinkCmpMenuSelection = { bg = palette.mulberry, gui = "bold" },
-		BlinkCmpScrollBarThumb = { bg = palette.magenta },
+		BlinkCmpMenuBorder = { bg = bg, fg = palette.slate },
+		BlinkCmpMenuSelection = { bg = palette.amethyst, gui = "bold" },
+		BlinkCmpScrollBarThumb = { bg = palette.slate },
 		BlinkCmpScrollBarGutter = { bg = bg },
 		BlinkCmpLabel = { bg = "NONE", fg = palette.magenta },
 		BlinkCmpLabelDeprecated = { bg = "NONE", fg = palette.magenta, strikethrough = true },
@@ -46,13 +46,26 @@ function M.create(palette, zitch_pattern, config)
 		BlinkCmpSource = { bg = "NONE", fg = palette.lilac },
 		-- BlinkCmpGhostText = {}, -- Ghost text preview
 		BlinkCmpDoc = { fg = palette.white, bg = bg },
-		BlinkCmpDocBorder = { bg = bg, fg = palette.magenta },
+		BlinkCmpDocBorder = { bg = bg, fg = palette.slate },
 		BlinkCmpDocSeparator = { bg = "NONE", fg = palette.gray },
 		-- BlinkCmpDocCursorLine = {},
 		BlinkCmpSignatureHelp = { fg = palette.white, bg = bg },
 		BlinkCmpSignatureHelpBorder = { bg = bg, fg = palette.magenta },
 		-- BlinkCmpSignatureHelpActiveParameter = {},
 	}
+
+	if config.clean_mode then
+		---@type ZitchdogHighlights
+		local clean = {
+			BlinkCmpMenu = { bg = palette.ash },
+			BlinkCmpMenuBorder = { fg = palette.ash, bg = palette.ash },
+			BlinkCmpMenuSelection = { bg = palette.amethyst },
+			BlinkCmpDoc = { bg = palette.ash },
+			BlinkCmpDocBorder = { fg = palette.ash, bg = palette.ash },
+		}
+		groups = vim.tbl_deep_extend("force", groups, clean)
+	end
+
 	return groups
 end
 

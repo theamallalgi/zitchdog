@@ -19,6 +19,7 @@ M.options = {
 	transparent_bg = false, -- boolean, toggles a transparent background
 	disable_cursorline = true, -- boolean, hides CursorLine highlight by matching it to bg
 	italic_comments = false, -- boolean, toggles italic comments
+	clean_mode = false, -- boolean, toggles the opinionated clean look
 	fg = nil, -- override the base foreground (defaults to the variant's white)
 	bg = nil, -- override the base background (defaults to the variant's black; ignored when transparent_bg = true)
 	colors = {}, -- override any specific palette color, e.g. { red = "#ff0000", purple = "#a277ff" }

@@ -9,6 +9,7 @@ function M.create(palette, zitch_pattern, config)
 	local darkBg = config.transparent_bg and "NONE" or palette.darkblack
 	local groups = {
 		CursorLine = {
+			---@diagnostic disable-next-line: undefined-field
 			bg = config.disable_cursorline and (config.transparent_bg and "NONE" or palette.black)
 				or palette.lightblack,
 		},
