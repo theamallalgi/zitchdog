@@ -53,6 +53,7 @@ function M.create(palette, zitch_pattern, config)
 		Italic = { gui = "italic" },
 		Error = { fg = palette.red, gui = "bold,underline" },
 		Todo = { fg = palette.green, gui = "bold,italic" },
+		LspInlayHint = { fg = "#5f3c81", bg = "NONE" },
 
 		-- rust
 		["@lsp.type.formatSpecifier"] = { fg = palette.orange },
@@ -88,6 +89,7 @@ function M.create(palette, zitch_pattern, config)
 		["@markup.quote"] = { fg = palette.gray },
 		-- misc
 		["@punctuation.special.markdown"] = { fg = palette.gray },
+		["@lsp.type.property.lua"] = {},
 	}
 	return groups
 end
