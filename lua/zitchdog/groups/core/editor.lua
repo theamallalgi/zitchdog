@@ -16,7 +16,7 @@ function M.create(palette, zitch_pattern, config)
 		-- CursorLine = { bg = palette.lightblack }, -- default
 		-- CursorLine = { bg = config.transparent_bg and "NONE" or palette.charcoal }, -- when hidden
 		Cursor = { bg = palette.orange },
-		iCursor = { bg = "#F6CEFF" },
+		iCursor = { bg = "#c0c9c3" },
 		lCursor = { bg = palette.magenta },
 		CursorIM = { bg = palette.magenta },
 		Directory = zitch_pattern.GreenBold,
@@ -34,7 +34,7 @@ function M.create(palette, zitch_pattern, config)
 		Substitute = { fg = "#c0c9c3", bg = "#051177", bold = true },
 		LineNr = zitch_pattern.PurpleFaded,
 		CursorLineNr = { bg = config.transparent_bg and "NONE" or palette.charcoal, fg = palette.lilac },
-		MatchParen = { fg = palette.mulberry, bg = palette.red, bold = true },
+		MatchParen = { bg = palette.red, fg = "#c0c9c3", bold = true },
 		Normal = { fg = palette.white, bg = bg },
 		Pmenu = { fg = palette.magenta, bg = bg },
 		PmenuSel = { fg = palette.magenta, bg = palette.mulberry, gui = "bold" },
