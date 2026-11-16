@@ -143,6 +143,14 @@ function M.create(palette, zitch_pattern, config)
 		LspReferenceRead = { bg = palette.pine },
 		LspReferenceWrite = { bg = palette.pine },
 	}
+
+	if config.clean_mode then
+		---@type ZitchdogHighlights
+		local clean = {
+			MatchParen = { bg = palette.maroon, fg = palette.red, bold = true },
+		}
+		groups = vim.tbl_deep_extend("force", groups, clean)
+	end
 	return groups
 end
 
