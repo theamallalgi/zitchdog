@@ -142,12 +142,18 @@ function M.create(palette, zitch_pattern, config)
 		LspReferenceText = { bg = palette.pine },
 		LspReferenceRead = { bg = palette.pine },
 		LspReferenceWrite = { bg = palette.pine },
+		LspFloatWinNormal = { link = "NormalFloat" },
+		LspFloatWinBorder = { link = "FloatBorder" },
 	}
 
 	if config.clean_mode then
 		---@type ZitchdogHighlights
 		local clean = {
-			MatchParen = { bg = palette.maroon, fg = palette.red, bold = true },
+			-- MatchParen = { bg = palette.maroon, fg = palette.red, bold = true },
+			NormalFloat = { fg = "#abb2bf", bg = "#0D0910" },
+			FloatBorder = { fg = "#2c1e36", bg = "NONE" },
+			FloatTitle = { fg = "#c0c9c3", bg = "#051177", bold = true },
+			FloatFooter = { fg = "#abb2bf", bg = "#0D0910" },
 		}
 		groups = vim.tbl_deep_extend("force", groups, clean)
 	end
