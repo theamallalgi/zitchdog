@@ -253,6 +253,33 @@ require('lualine').setup {
 }
 ```
 
+#### 2. Get proper colors in [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)
+
+```lua
+-- your lightline config file?
+-- rest of your config...
+config = function()
+	vim.g.lightline = {
+		colorscheme = "zitchdog", -- zitchdog_pine/zitchdog_grape
+		-- zitchdog_pine/zitchdog_grape -- snake_case, not kebab!
+		-- rest of your config...
+	}
+end
+-- rest of your config...
+```
+
+#### 3. Get proper colors in [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
+
+```lua
+-- your barbecue config file?
+require('barbecue').setup {
+  -- rest of your barbecue config
+  theme = 'auto', -- or 'zitchdog-grape/pine'
+  -- rest of your barbecue config
+	-- note: make sure barbeque loads after the colorscheme!
+}
+```
+
 </details>
 
 ### Palette API
