@@ -26,7 +26,7 @@ end
 ---@param p ZitchdogPalette
 ---@return table
 function M.build(p)
-	local second = pair(p.cyan, p.teal)
+	local second = pair(p.purple, p.aubergine)
 	local muted = pair(p.slate, p.darkblack)
 	local dim = pair(p.graphite, p.darkblack)
 
