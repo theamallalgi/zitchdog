@@ -1,4 +1,4 @@
-<img width="1400" height="784" alt="Header" src="https://github.com/user-attachments/assets/d556b82a-61a3-4669-a03f-a76dbb0fa24e" />
+<img width="1400" height="784" alt="Zitchdog" src="https://github.com/user-attachments/assets/d32e3249-ce21-4e24-934f-4d0fdf6f64ce" />
 
 # Zitchdog
 
