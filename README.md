@@ -1,10 +1,10 @@
-<img width="1400" height="784" alt="Zitchdog" src="https://github.com/user-attachments/assets/d32e3249-ce21-4e24-934f-4d0fdf6f64ce" />
+<img width="1400" height="784" alt="zitch-1" src="https://github.com/user-attachments/assets/bc723007-acab-4bf4-a57c-84ad32b419d2" />
 
 # Zitchdog
 
 A minimal purple-based soothing colorscheme (for neovim and much more!) inspired by [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants!
 
-## Theme Variants
+### Theme Variants
 
 <details open>
 	<summary>Variant: <b>Grape</b></summary>
