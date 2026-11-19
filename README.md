@@ -1,8 +1,8 @@
 <img width="1400" height="784" alt="zitch-1" src="https://github.com/user-attachments/assets/bc723007-acab-4bf4-a57c-84ad32b419d2" />
 
-# Zitchdog
+## Zitchdog
 
-A minimal purple-based soothing colorscheme (for neovim and much more!) inspired by [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/), but with different palettes and added variants!
+a minimal, purple-based colorscheme designed to be soothing on the eyes. zitchdog is inspired by [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/), thoughtfully tuned for neovim and beyond, with a clean, considered aesthetic. no ugly borders on your panels, no unsightly little inconsistencies around the nooks and crannies. just a carefully crafted color palette that feels right.
 
 ### Theme Variants
 
@@ -32,7 +32,7 @@ A minimal purple-based soothing colorscheme (for neovim and much more!) inspired
 
 </details>
 
-## Features
+### Features
 
 - Multiple theme variants.
 - Supports tons of major plugins.
@@ -149,7 +149,7 @@ A minimal purple-based soothing colorscheme (for neovim and much more!) inspired
 
 </details>
 
-## Requirements
+### Requirements
 
 - Neovim: Version >= 0.8.0
 - Patched Nerd Font(s) for glyph support (for extras)
@@ -358,7 +358,7 @@ These are the base values. Overrides from `colors`, `fg` and `bg` in your config
 
 </details>
 
-## Gallery
+### Gallery
 
 <details open>
 	<summary>Some screenshots of the `Grape` variant</summary>
