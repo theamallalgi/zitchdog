@@ -1,0 +1,50 @@
+name: Sync Vim port
+
+on:
+  push:
+    branches: [main]
+    paths: ["lua/**", "scripts/generate_vim.lua", ".github/workflows/sync-vim.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: sync-vim
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+
+      - name: Generate
+        run: nvim --clean -l scripts/genVim.lua build/vim
+
+      - name: Smoke test in real Vim
+        run: |
+          sudo apt-get install -y vim-nox
+          for v in grape pine; do
+            vim -Nes -u NONE -i NONE --cmd 'set rtp^=build/vim' \
+              -c "try | colorscheme zitchdog-$v | catch | cquit | endtry" -c 'qa!'
+          done
+
+      - uses: actions/checkout@v4
+        with:
+          repository: theamallalgi/zitchdog.vim
+          path: vim-port
+          ssh-key: ${{ secrets.VIM_PORT_DEPLOY_KEY }}
+
+      - name: Push if changed
+        run: |
+          cp -r build/vim/colors build/vim/autoload vim-port/
+          cd vim-port
+          git add -A
+          git diff --cached --quiet && exit 0
+          git config user.name "zitchdog-bot"
+          git config user.email "zitchdog-bot@users.noreply.github.com"
+          git commit -m "sync: zitchdog@${GITHUB_SHA::7}"
+          git push
