@@ -22,7 +22,7 @@ jobs:
           version: stable
 
       - name: Generate
-        run: nvim --clean -l scripts/genVim.lua build/vim
+        run: nvim --clean -l scripts/generate_vim.lua build/vim
 
       - name: Smoke test in real Vim
         run: |
