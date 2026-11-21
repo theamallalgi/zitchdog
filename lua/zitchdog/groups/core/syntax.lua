@@ -88,6 +88,7 @@ function M.create(palette, zitch_pattern, config)
 		["@markup.list.unchecked"] = { fg = palette.green },
 		["@markup.quote"] = { fg = palette.gray },
 		-- misc
+		["@punctuation.delimiter"] = { fg = palette.slate },
 		["@punctuation.special.markdown"] = { fg = palette.gray },
 		["@lsp.type.property.lua"] = {},
 	}
